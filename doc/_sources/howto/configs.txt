@@ -1,0 +1,56 @@
+Configuration File
+==================
+The configuration file is located at::
+
+  $ vim /etc/tornado/snow.config
+
+The default configuration is::
+
+  snow{
+      node{
+          data{
+              dir =  "/var/lib/tornado/snow/data"
+              files = ["/var/lib/tornado/snow/data/default"]
+              }
+          config  {
+               file="/etc/tornado/snow.config"
+                  }
+          home="/var/lib/tornado/snow"
+          log{
+              default="/var/log/tornado/snow/snow.log"
+              security="/var/log/tornado/snow/security.log"
+              request="/var/log/tornado/snow/request.log"
+              }
+          lib="/usr/lib/tornado/lib/snow"
+          }
+      copyright = "/usr/share/doc/snow/copyright"
+      }
+  snow.seeds = ["akka.tcp://SnowStorm@localhost:3830"]
+  # snow.seeds = ["akka.tcp://SnowStorm@localhost:3830","akka.tcp://SnowStorm@HOSTNAME:3830"]
+  # snow.node.endpoint.port = 3830
+  # snow.node.endpoint.hostname = "localhost"
+
+
+to add another node to the system the user need to add address to ``snow.seeds`` list. to do so
+uncomment the other and comment the default of to enable ``HOSTNAME`` to join to the system.
+subsituate ``HOSTNAME`` with address or resolveable name of the second node. for example::
+
+  # snow.seeds = ["akka.tcp://SnowStorm@localhost:3830"]
+  snow.seeds = ["akka.tcp://SnowStorm@n1.cluster.example.com:3830","akka.tcp://SnowStorm@n2.cluster.example.com:3830"]
+  snow.node.endpoint.port = 3830
+  snow.node.endpoint.hostname = "n1.cluster.example.com"
+
+in the second node add this confiduration::
+
+  snow.node.endpoint.port = 3830
+  snow.node.endpoint.hostname = "n2.cluster.example.com"
+
+Data Files
+----------
+The system autmomaticly stores data file in::
+
+  /var/lib/tornado/snow/data
+
+To change the location set the new path with the variable ``snow.node.data.dir``
+By default this directory is exclusively restricted to the user ``snow``.
+

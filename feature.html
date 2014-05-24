@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+ <link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link href="public/Style.css" rel="stylesheet">
+<script src="public/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="public/index.js" type="text/javascript"></script>
+
+<meta charset='utf-8'/>
+
+<div class="container" id='subhead'>
+    <div class="col-md-3">
+        <a href="index.html"><img src="public/img/Logo.png") style="width:200px; height: 80px;"></a>
+    </div>
+    <div class="col-md-9" id='pp'>
+        <p>Parallel Object File System</p>
+    </div>
+</div>
+
+<div class='mnu'>
+    <nav class="container navbar" role="navigation">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a  href="feature.html">Features</a></li>
+                    <li><a  href="doc/index.html">Documentation</a></li>
+                    <li><a  href="#">Client API</a></li>
+                    <li><a  href="#">Support</a></li>
+                    <li><a  href="#">Getting Started</a></li>
+                    <li><a  href="#">Download</a></li>
+                    <li><a  href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="container container0">
+        <div class="col-md-4">
+            <label class='left-col-1' id='lf1' onclick="left1()">What We Do ...?<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:181px"></label>
+            <label class='left-col-2' id='lf2'  onclick="left2()">Map/Reduce Model<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:160px"></label>
+            <label class='left-col-3' id='lf3'  onclick="left3()">Indexer and Directory Combined<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:75px"></label>
+            <label class='left-col-4' id='lf4'  onclick="left4()">3x Faster Indexer<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:170px"></label>
+            <label class='left-col-5' id='lf5'  onclick="left5()">In-Memory Performance<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:127px"></label>
+            <label class='left-col-6' id='lf6'  onclick="left6()">Parallel Encryption Engine<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:112px"></label>
+            <label class='left-col-7' id='lf7'  onclick="left7()">Perform/Transform Model<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:117px"></label>
+            <label class='left-col-8' id='lf8'  onclick="left8()">Distributed MetaData<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:147px"></label>
+            <label class='left-col-9' id='lf9'  onclick="left9()">Better Multi User Concurrency<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:90px"></label>
+            <label class='left-col-10' id='lf10'  onclick="left10()">Hadoop HCFS and POSIX Compatibility<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:32px"></label>
+            <label class='left-col-11' id='lf11'  onclick="left11()">Parallel Object File System<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:107px"></label>
+            <label class='left-col-12' id='lf12'  onclick="left12()">Parallel Compression Engine<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:97px"></label>
+        </div>
+
+
+        <div class="col-md-8">
+            <h4>What We Do ...?</h4>
+            <pre>
+//Creates Object File Over Cluster
+val words = Strings("default")
+
+//Puts Code on the File
+
+words << "Hello" << "World" << "!"
+
+val output = new mutable.HashMap[String, Int]
+
+def count(word: String) =
+if (!output.contains(word)) 0 else output(word)
+//Process With Objects
+words {
+      word => output += word -> (count(word) + 1)
+} {
+      input =>
+      input.keys.foreach(
+           word =>
+            output += word -> (input(word) + output(word)))
+       output
+}
+</pre>
+
+            <h4>Map/Reduce Model</h4>
+            <pre>Map Data Before Retrieval (in-place)</pre>
+
+            <h4>Indexer and Directory Combined</h4>
+            <pre> Fast and Parallel File Creation</pre>
+
+            <h4>3x Faster Indexer</h4>
+            <pre>on Memory Mode</pre>
+
+            <h4>In-Memory Performance</h4>
+<pre>88% increase to write throughput, see [Benchmarks]
+20Gbps on a single node</pre>
+
+            <h4>Parallel Encryption Engine</h4>
+<pre>60x Speedup of Encryption without CPU Overhead
+60x Speedup of Encryption without CPU Overhead</pre>
+
+            <h4>Perform/Transform Model</h4>
+<pre>Simplifies Distributed Processing
+Think Small and Execute in the Large</pre>
+
+            <h4>Distributed MetaData</h4>
+<pre>Fast and Parallel File Creation Without Central Directory
+Scaling MetaData Operations</pre>
+
+            <h4>Better Multi User Concurrency</h4>
+<pre>Semi-Ordered Object Streaming Technology
+Multi User Concurrency</pre>
+
+            <h4>Hadoop HCFS and POSIX Compatibility</h4>
+<pre>Seamlessly integrate your Hadoop
+Handle Same Objects through POSIX and HCFS</pre>
+
+            <h4>Parallel Object File System</h4>
+<pre>Memory, Disk and SSD tiering
+Faster parallel scan (Sequential Read)of object collections for
+BigData Analytics
+64K Pages instead of 128M Blocks
+50x Faster with parallel read</pre>
+
+            <h4>Parallel Compression Engine</h4>
+<pre>x27 Speedup on Compression without CPU Overhead
+Lossless Compression for Web and Text Data
+with CUDA Architecture Support</pre>
+
+
+
+        </div>
+    </div>
+</div>
+</body>
+<div class='container container2'>
+     <div class='row'>
+         <div class='col-md-5'>
+             <div class="row" >
+                     <div class="col-md-3">
+                         <p id='cont'>Contact us: </p>
+                     </div>
+                     <div class="col-md-1">
+                         <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico") style="width=20px; height: 23px; margin-top:12px;"></a>
+                     </div>
+                     <div class="col-md-1">
+                         <a href="https://plus.google.com"><img src="public/img/Google-Plus.ico") style="width=15px; height: 15px; margin-top: 15px;"></a>
+                     </div>
+                     <div class="col-md-1">
+                          <a href="https://www.linkedin.com"><img src="public/img/linkedin.ico") style="width=15px; height: 15px; margin-top: 15px;"></a>
+                     </div>
+                     <div class="col-md-1">
+                         <a href="https://www.linkedin.com"><img src="public/img/email.ico") style="width=18px; height: 18px; margin-top: 15px;"></a>
+                     </div>
+                 <div class="col-md-5"> </div>
+              </div>
+         </div>
+         <div class='col-md-7'></div>
+     </div>
+</div>
+
+<div class="row under-foot">
+    <div class='container container3'>
+        <div class='col-md-5'>
+            &copy; Miras Corporation 2013;
+        </div>
+        <div class='col-md-7'></div>
+    </div>
+</div>
+
+
+
+</html>
+
+<style>
+
+    html{
+        font: Helvetica;
+    }
+
+
+    .col-md-4{
+        color: #888888;
+        font-size: 13px;
+
+    }
+
+    .col-md-8{
+        border-left: solid 1px #eeeeee;
+        margin-top: 70px;
+
+
+    }
+
+    .col-md-8 pre{
+        color:#666666;
+        font-size: 14px;
+        background-color: inherit;
+        border: none;
+        text-align: left;
+        margin-top: -10px;
+    }
+    .container0{
+        width: 980px;
+        margin-top: 52px;
+        background-color: #ffffff;
+        border-left: solid 1px #dddddd;
+        border-right: solid 1px #dddddd;
+        border-top: solid 1px #dddddd;
+        height: 2100px;
+    }
+
+    .left-col-1{
+        cursor: pointer;
+        margin-top: 35px;
+        position: fixed;
+
+    }
+
+    .left-col-2{
+        cursor: pointer;
+        margin-top: 65px;
+        position: fixed;
+
+    }
+
+    .left-col-3{
+        cursor: pointer;
+        margin-top: 95px;
+        position: fixed;
+    }
+
+    .left-col-4{
+        cursor: pointer;
+        margin-top: 125px;
+        position: fixed;
+    }
+
+    .left-col-5{
+        cursor: pointer;
+        margin-top: 155px;
+        position: fixed;
+    }
+
+    .left-col-6{
+        cursor: pointer;
+        margin-top: 185px;
+        position: fixed;
+    }
+
+    .left-col-7{
+        cursor: pointer;
+        margin-top: 215px;
+        position: fixed;
+    }
+
+    .left-col-8{
+        cursor: pointer;
+        margin-top: 245px;
+        position: fixed;
+    }
+
+    .left-col-9{
+        cursor: pointer;
+        margin-top: 275px;
+        position: fixed;
+    }
+
+    .left-col-10{
+        cursor: pointer;
+        margin-top: 305px;
+        position: fixed;
+    }
+
+    .left-col-11{
+        cursor: pointer;
+        margin-top: 335px;
+        position: fixed;
+
+    }
+
+    .left-col-12{
+        cursor: pointer;
+        margin-top: 365px;
+        position: fixed;
+
+    }
+
+
+
+</style>
+
+<script>
+    var y;
+    var lff = [lf1, lf2, lf3,lf4,lf5,lf6,lf7,lf8,lf9,lf10,lf11,lf12];
+    var x=1;
+
+    function left1(){
+        y= $("body").scrollTop();
+        if(y<100){
+            $("#subhead").hide();
+            $("#mnu").animate({marginTop:'0px'});
+        }
+        else{
+            $('body').animate({scrollTop:'90px'})
+        }
+    }
+    function left2(){
+        $('body').animate({scrollTop:'550'});
+    }
+    function left3(){
+        $('body').animate({scrollTop:'615'})
+    }
+    function left4(){
+        $('body').animate({scrollTop:'670'})
+    }
+    function left5(){
+        $('body').animate({scrollTop:'740'})
+    }
+    function left6(){
+        $('body').animate({scrollTop:'830'})
+    }
+    function left7(){
+        $('body').animate({scrollTop:'920'})
+    }
+    function left8(){
+        $('body').animate({scrollTop:'1000'})
+    }
+    function left9(){
+        $('body').animate({scrollTop:'1100'})
+    }
+    function left10(){
+        $('body').animate({scrollTop:'1200'})
+    }
+    function left11(){
+        $('body').animate({scrollTop:'1300'})
+    }
+    function left12(){
+        $('body').animate({scrollTop:'1425'})
+    }
+
+    $(document).scroll(function(){
+        y= $("body").scrollTop();
+        if(y >= 1425){
+            lff[x-1].style.color = "#888888";
+            x=12;
+            lf12.style.color = "#000000";
+        }
+        else if(y >= 1285 && y < 1425){
+            lff[x-1].style.color = "#888888";
+            x=11;
+            lf11.style.color = "#000000";
+        }
+        else if(y >= 1200 && y < 1285){
+            lff[x-1].style.color = "#888888";
+            x=10;
+            lf10.style.color = "#000000";
+        }
+        else if(y >= 1100 && y < 1200){
+            lff[x-1].style.color = "#888888";
+            x=9;
+            lf9.style.color = "#000000";
+        }
+        else if(y >= 1000 && y < 1100){
+            lff[x-1].style.color = "#888888";
+            x=8;
+            lf8.style.color = "#000000";
+        }
+        else if(y >= 920 && y < 1000){
+            lff[x-1].style.color = "#888888";
+            x=7;
+            lf7.style.color = "#000000";
+        }
+        else if(y >= 830 && y < 920){
+            lff[x-1].style.color = "#888888";
+            x=6;
+            lf6.style.color = "#000000";
+        }
+        else if(y >= 740 && y < 830){
+            lff[x-1].style.color = "#888888";
+            x=5;
+            lf5.style.color = "#000000";
+        }
+        else if(y >= 670 && y < 740){
+            lff[x-1].style.color = "#888888";
+            x=4;
+            lf4.style.color = "#000000";
+        }
+        else if(y >= 615 && y < 670){
+            lff[x-1].style.color = "#888888";
+            x=3;
+            lf3.style.color = "#000000";
+        }
+        else if(y >= 550 && y < 615){
+            lff[x-1].style.color = "#888888";
+            x=2;
+            lf2.style.color = "#000000";
+        }
+        else if(y < 550){
+            lff[x-1].style.color = "#888888";
+            x=1;
+            lf1.style.color = "#000000";
+        }
+
+    });
+
+</script>
+
+
+

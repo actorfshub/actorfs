@@ -1,0 +1,21 @@
+Amazon EC2 and S3
+=================
+
+Getting Started on AWS
+----------------------
+
+Scale on Cloud
+--------------
+
+Google Cloud Platform
+=====================
+
+
+Windows Azure Cloud
+===================
+
+Heroku
+======
+
+Open Stack
+==========

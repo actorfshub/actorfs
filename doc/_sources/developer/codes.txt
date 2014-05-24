@@ -1,0 +1,50 @@
+.. ActorFS documentation master file, created by
+   sphinx-quickstart on Sun May 18 23:35:52 2014.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to ActorFS's documentation!
+===================================
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+
+
+Documentation
+=============
+
+Using Snow Storm for creating large scale web services are a key factor to decide on
+
+* Using Web Design
+* Creating stop and start services
+
+Doing Compression Settings
+==========================
+
+dsds
+----
+
+
+.. code-block:: scala
+
+   nbb.position(3)
+   val res2 = new Array[Byte](4)
+   nbb.get(res2)
+   println("res: " + new String(res2, "UTF-8")
+
+test [5]_
+
+.. [5] A numerical footnote. Note
+   there's no colon after the ``]``.

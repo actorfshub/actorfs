@@ -1,0 +1,22 @@
+Installation
+============
+
+Ubuntu and Debian
+-----------------
+to install this on redhat linux
+
+
+Fedora & Redhat
+---------------
+
+
+Microsoft Windows
+-----------------
+
+
+MAC OsX
+-------
+
+
+VM Images
+---------

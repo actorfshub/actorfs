@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started on Ubuntu x64 &mdash; ActorFS v1.0.0-RC1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.0.0-RC1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="ActorFS v1.0.0-RC1 documentation" href="../index.html" />
+    <link rel="next" title="Configuration File" href="configs.html" />
+    <link rel="prev" title="Why ActorFS?" href="../why/todo.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="configs.html" title="Configuration File"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../why/todo.html" title="Why ActorFS?"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ActorFS v1.0.0-RC1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="getting-started-on-ubuntu-x64">
+<h1>Getting Started on Ubuntu x64<a class="headerlink" href="#getting-started-on-ubuntu-x64" title="Permalink to this headline">¶</a></h1>
+<p>In this tutorial we explain how ActorFS will be installed on ubuntu box. We choosed ubuntu 64 bit, for other systems
+we follow installation topic. ActorFS is designed to easily installed and administrated.</p>
+<div class="section" id="system-requirements">
+<h2>System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h2>
+<p>For this installation we need an ubuntu machine having enough disk capacity to test 1GB data operations. Also the user may
+use lower amount of space but functonalities will be limited. Minimum disk size to have ActorFS functional is 128MB, we
+have supposed page sized are default on 64KB.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="44%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Requirement</th>
+<th class="head">Details</th>
+<th class="head">Version</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>OS</td>
+<td>Ubuntu</td>
+<td>13.04 x64</td>
+</tr>
+<tr class="row-odd"><td>JVM</td>
+<td colspan="2">openjdk-7-jre</td>
+</tr>
+<tr class="row-even"><td>ActorFS</td>
+<td>1.0</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="getting-actorfs">
+<h2>Getting ActorFS<a class="headerlink" href="#getting-actorfs" title="Permalink to this headline">¶</a></h2>
+<p>To download actor fs put following code on command line</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$&gt; wget https://dl.actorfs.org/latest/actorfs.tar.gz
+$&gt; tar -xzvf actorfs.tar.gz
+</pre></div>
+</div>
+<p>If apt-get is available you may choose this way:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$&gt; echo &#39;deb http://archive.actorfs.org/ubuntu rain main&#39; | sudo tee /etc/apt/sources.list.d/actorfs.list
+$&gt; sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+$&gt; sudo apt-get update
+$&gt; sudo apt-get install actorfs
+</pre></div>
+</div>
+<p>Using apt-get is safe because this use data files from the previous installed version. also it is possible to flush
+data files, see ... for more information. This operation may be used to update the system regularly when any patch is
+available or any bug fix or even new version. ActorFS is supposed to be backward compatible only for minor versions
+see more.</p>
+<p>You have installed actor fs upon finishing apt-get</p>
+</div>
+<div class="section" id="actorfs-service">
+<h2>ActorFS Service<a class="headerlink" href="#actorfs-service" title="Permalink to this headline">¶</a></h2>
+<p>To start and stop the service use:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$&gt; sudo service actorfs start
+$&gt; sudo service actorfs stop
+$&gt; sudo service actorfs restart
+</pre></div>
+</div>
+</div>
+<div class="section" id="default-configuration">
+<h2>Default Configuration<a class="headerlink" href="#default-configuration" title="Permalink to this headline">¶</a></h2>
+<p>ActorFS ships with default configuration however the user may change them. The main configuration file will be found on</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$&gt; cat /etc/tornado/snow.config.example
+$&gt; cat /etc/tornado/snow.config
+</pre></div>
+</div>
+</div>
+<div class="section" id="log-files">
+<h2>Log Files<a class="headerlink" href="#log-files" title="Permalink to this headline">¶</a></h2>
+<p>Log files are acessable through this location:</p>
+<div class="code bash highlight-python"><div class="highlight"><pre>$&gt; cat /etc/tornado/snow.config.example
+$&gt; cat /etc/tornado/snow.config
+</pre></div>
+</div>
+</div>
+<div class="section" id="jvm-options">
+<h2>JVM Options<a class="headerlink" href="#jvm-options" title="Permalink to this headline">¶</a></h2>
+<p>Default option are</p>
+<div class="highlight-python"><div class="highlight"><pre># location of java
+JAVA=/usr/bin/java
+
+# arguments to pass to java
+JAVA_ARGS=&quot;-Xmx512M -XX:MaxPermSize=256M -Djava.net.preferIPv4Stack=true&quot;
+#JAVA_ARGS=&quot;-Djava.net.preferIPv4Stack=true&quot; # make jenkins listen on IPv4 address
+
+PIDFILE=/var/run/tornado/snow.pid
+
+# user id to be invoked as (otherwise will run as root; not wise!)
+SNOW_USER=snow
+
+# location of the jenkins war file
+SNOW_JAR=/usr/lib/tornado/lib/snow/snow.jar
+
+# jenkins home location
+SNOW_HOME=/var/lib/tornado/snow
+</pre></div>
+</div>
+<p>to change this the user need to edit default file located at</p>
+<div class="highlight-python"><div class="highlight"><pre>$&gt; vim /etc/default/actorfs
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Getting Started on Ubuntu x64</a><ul>
+<li><a class="reference internal" href="#system-requirements">System Requirements</a></li>
+<li><a class="reference internal" href="#getting-actorfs">Getting ActorFS</a></li>
+<li><a class="reference internal" href="#actorfs-service">ActorFS Service</a></li>
+<li><a class="reference internal" href="#default-configuration">Default Configuration</a></li>
+<li><a class="reference internal" href="#log-files">Log Files</a></li>
+<li><a class="reference internal" href="#jvm-options">JVM Options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../why/todo.html"
+                        title="previous chapter">Why ActorFS?</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="configs.html"
+                        title="next chapter">Configuration File</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/howto/started.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="configs.html" title="Configuration File"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../why/todo.html" title="Why ActorFS?"
+             >previous</a> |</li>
+        <li><a href="../index.html">ActorFS v1.0.0-RC1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Miras Technologies International.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

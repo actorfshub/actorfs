@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ActorFS Administration Manual and Developer Guide &mdash; ActorFS v1.0.0-RC1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v1.0.0-RC1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="ActorFS v1.0.0-RC1 documentation" href="#" />
+    <link rel="next" title="Why ActorFS?" href="why/todo.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="why/todo.html" title="Why ActorFS?"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">ActorFS v1.0.0-RC1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="actorfs-administration-manual-and-developer-guide">
+<h1>ActorFS Administration Manual and Developer Guide<a class="headerlink" href="#actorfs-administration-manual-and-developer-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-actorfs">
+<h2>Why ActorFS?<a class="headerlink" href="#why-actorfs" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="why/todo.html">Why ActorFS?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="why/todo.html#benefits">Benefits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="why/todo.html#benchmarks">Benchmarks</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="howto/started.html">Getting Started on Ubuntu x64</a></li>
+<li class="toctree-l1"><a class="reference internal" href="howto/configs.html">Configuration File</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="user-manual">
+<h2>User Manual<a class="headerlink" href="#user-manual" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html">Intriduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#benefits">Benefits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html#features">Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#platform-independent">Platform Independent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#compression">Compression</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html#modularity">Modularity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html#object-system">Object System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#basic-io-operations">Basic IO Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#streaming">Streaming</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#pipe-file">Pipe File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html#page-system">Page System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#read">read</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html#file-system">File System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#hcfs-interface-for-hadoop-and-spark">HCFS interface for Hadoop and Spark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#posix-interface-with-fuse">POSIX interface with  FUSE</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html#using-samba-services">Using Samba Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/topicstobewritten.html#usage-scenarios">Usage Scenarios</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/topicstobewritten.html#loading-data-from-mysql">Loading Data from MySQL</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="bigdata-analytics">
+<h2>BigData Analytics<a class="headerlink" href="#bigdata-analytics" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bigdata/todo.html">ActorFS for Hadoop</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bigdata/todo.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bigdata/todo.html#world-count-on-actorfs">World Count on ActorFS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bigdata/todo.html#apache-hive">Apache Hive</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bigdata/todo.html#actorfs-for-spark">ActorFS for Spark</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bigdata/todo.html#id1">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bigdata/todo.html#actorfs">ActorFS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bigdata/todo.html#strosphere-integration">Strosphere Integration</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="bigdata-search">
+<h2>BigData Search<a class="headerlink" href="#bigdata-search" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="search/todo.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="search/todo.html#why-actorfs">Why ActorFS</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="bigdata-integration">
+<h2>BigData Integration<a class="headerlink" href="#bigdata-integration" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="stem/todo.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stem/todo.html#integration-with-rdbss">Integration with RDBSs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="stem/todo.html#mysql">MySql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stem/todo.html#oracle">Oracle</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="actorfs-pro">
+<h2>ActorFS Pro<a class="headerlink" href="#actorfs-pro" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html">Monitoring Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#cuda-technology-support">CUDA Technology Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pro/topicstobewritten.html#array-compression-engine">Array Compression Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pro/topicstobewritten.html#encryption">Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pro/topicstobewritten.html#de-duplication">De-duplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pro/topicstobewritten.html#integrity-check">Integrity Check</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pro/topicstobewritten.html#video-and-music-encoding">Video and Music Encoding</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#advanced-memory-management-module">Advanced Memory Management Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#multi-user-volume-management">Multi User Volume Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#storage-tiring">Storage Tiring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#data-federation">Data Federation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#perform-transform-library">Perform/Transform Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#video-music-streaming">Video &amp; Music Streaming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#file-download">File Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pro/topicstobewritten.html#data-grid">Data Grid</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="cloud">
+<h2>Cloud<a class="headerlink" href="#cloud" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cloud/todo.html">Amazon EC2 and S3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloud/todo.html#getting-started-on-aws">Getting Started on AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloud/todo.html#scale-on-cloud">Scale on Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cloud/todo.html#google-cloud-platform">Google Cloud Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud/todo.html#windows-azure-cloud">Windows Azure Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud/todo.html#heroku">Heroku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud/todo.html#open-stack">Open Stack</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="administration">
+<h2>Administration<a class="headerlink" href="#administration" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="admin/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admin/installation.html#ubuntu-and-debian">Ubuntu and Debian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin/installation.html#fedora-redhat">Fedora &amp; Redhat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin/installation.html#microsoft-windows">Microsoft Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin/installation.html#mac-osx">MAC OsX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin/installation.html#vm-images">VM Images</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="admin/topicstobewritten.html">Monitoring Console</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="developer-guide">
+<h2>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="developer/codes.html">Welcome to ActorFS&#8217;s documentation!</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developer/codes.html#indices-and-tables">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/codes.html#documentation">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer/codes.html#doing-compression-settings">Doing Compression Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="developer/codes.html#dsds">dsds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developer/topicstobewritten.html">Architecture</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">ActorFS Administration Manual and Developer Guide</a><ul>
+<li><a class="reference internal" href="#why-actorfs">Why ActorFS?</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li><a class="reference internal" href="#user-manual">User Manual</a></li>
+<li><a class="reference internal" href="#bigdata-analytics">BigData Analytics</a></li>
+<li><a class="reference internal" href="#bigdata-search">BigData Search</a></li>
+<li><a class="reference internal" href="#bigdata-integration">BigData Integration</a></li>
+<li><a class="reference internal" href="#actorfs-pro">ActorFS Pro</a></li>
+<li><a class="reference internal" href="#cloud">Cloud</a></li>
+<li><a class="reference internal" href="#administration">Administration</a></li>
+<li><a class="reference internal" href="#developer-guide">Developer Guide</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="why/todo.html"
+                        title="next chapter">Why ActorFS?</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="why/todo.html" title="Why ActorFS?"
+             >next</a> |</li>
+        <li><a href="#">ActorFS v1.0.0-RC1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Miras Technologies International.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

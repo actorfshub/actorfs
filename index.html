@@ -1,81 +1,145 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Actorfs by actorfshub</title>
+<!DOCTYPE html>
+<html ng-app>
+<head>
+ <link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link href="public/Style.css" rel="stylesheet">
+<script src="public/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="public/index.js" type="text/javascript"></script>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Actorfs</h1>
-        <p>ActorFS Parallel Object File System</p>
+<meta charset='utf-8'/>
 
-        <p class="view"><a href="https://github.com/actorfshub/actorfs">View the Project on GitHub <small>actorfshub/actorfs</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/actorfshub/actorfs/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/actorfshub/actorfs/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/actorfshub/actorfs">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/actorfshub">actorfshub</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+<div class="container" id='subhead'>
+    <div class="col-md-3">
+        <a href="index.html"><img src="public/img/Logo.png") style="width:200px; height: 80px;"></a>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-51300600-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    <div class="col-md-9" id='pp'>
+        <p>Parallel Object File System</p>
+    </div>
+</div>
 
-  </body>
+<div class='mnu'>
+    <nav class="container navbar" role="navigation">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a  href="feature.html">Features</a></li>
+                    <li><a  href="doc/index.html">Documentation</a></li>
+                    <li><a  href="#">Client API</a></li>
+                    <li><a  href="#">Support</a></li>
+                    <li><a  href="#">Getting Started</a></li>
+                    <li><a  href="#">Download</a></li>
+                    <li><a  href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="container container1">
+        <pre >
+           <br> <g style='font: 25px BOLD'>ActorFS</g> is a high-throughput and reliable parallel object file system
+        </pre>
+        <!-- features -->
+        <h1>Features</h1>
+        <div class="row" >
+            <div class="col-md-4"><ul>Map/Reduce Model</ul>
+                <li class="li-body">Map Data Before Retrieval (in-place)</li>
+            </div>
+            <div class="col-md-4"><ul>Indexer and Directory Combined</ul>
+                <li class="li-body">Fast and Parallel File Creation</li>
+            </div>
+            <div class="col-md-4"><ul>3x Faster Indexer</ul>
+                <li class="li-body">on Memory Mode</li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><ul>In-Memory Performance</ul>
+                <li class="li-body">88% increase to write throughput, see [Benchmarks]</li>
+                <li class="li-body">20Gbps on a single node</li>
+            </div>
+            <div class="col-md-4"><ul>Parallel Encryption Engine</ul>
+                <li class="li-body">60x Speedup of Encryption without CPU Overhead</li>
+                <li class="li-body">Protects Data over Cloud</li>
+            </div>
+            <div class="col-md-4"><ul>Perform/Transform Model</ul>
+                <li class="li-body">Simplifies Distributed Processing</li>
+                <li class="li-body">Think Small and Execute in the Large</li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><ul>Distributed MetaData</ul>
+                <li class="li-body">Fast and Parallel File Creation Without Central Directory</li>
+                <li class="li-body">Scaling MetaData Operations</li>
+            </div>
+            <div class="col-md-4"><ul>Better Multi User Concurrency</ul>
+                <li class="li-body">Semi-Ordered Object Streaming Technology</li>
+                <li class="li-body">Multi User Concurrency</li>
+            </div>
+            <div class="col-md-4"><ul>Hadoop HCFS and POSIX Compatibility</ul>
+                <li class="li-body">Seamlessly integrate your Hadoop</li>
+                <li class="li-body">Handle Same Objects through POSIX and HCFS</li>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4"><ul>Parallel Object File System</ul>
+                <li class="li-body">Memory, Disk and SSD tiering</li>
+                <li class="li-body">Faster parallel scan (Sequential Read)
+                    <br>of object collections for</li>
+                <li class="li-body">BigData Analytics</li>
+                <li class="li-body">64K Pages instead of 128M Blocks</li>
+                <li class="li-body">50x Faster with parallel read</li>
+            </div>
+            <div class="col-md-4"><ul>Parallel Compression Engine</ul>
+                <li class="li-body">x27 Speedup on Compression without CPU Overhead</li>
+                <li class="li-body">Lossless Compression for Web and Text Data</li>
+                <li class="li-body">with CUDA Architecture Support</li>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div>
+</body>
+
+<div class='container container2'>
+     <div class='row'>
+         <div class='col-md-5'>
+             <div class="row" >
+                     <div class="col-md-3">
+                         <p id='cont'>Contact us: </p>
+                     </div>
+                     <div class="col-md-1">
+                         <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico") style="width=20px; height: 23px; margin-top:12px;"></a>
+                     </div>
+                     <div class="col-md-1">
+                         <a href="https://plus.google.com"><img src="public/img/Google-Plus.ico") style="width=15px; height: 15px; margin-top: 15px;"></a>
+                     </div>
+                     <div class="col-md-1">
+                          <a href="https://www.linkedin.com"><img src="public/img/linkedin.ico") style="width=15px; height: 15px; margin-top: 15px;"></a>
+                     </div>
+                     <div class="col-md-1">
+                         <a href="https://www.linkedin.com"><img src="public/img/email.ico") style="width=18px; height: 18px; margin-top: 15px;"></a>
+                     </div>
+                 <div class="col-md-5"> </div>
+              </div>
+         </div>
+         <div class='col-md-7'></div>
+     </div>
+</div>
+
+<div class="row under-foot">
+    <div class='container container3'>
+        <div class='col-md-5'>
+            &copy; Miras Corporation 2013;
+        </div>
+        <div class='col-md-7'></div>
+    </div>
+</div>
+
+
 </html>
