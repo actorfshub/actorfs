@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app>
 <head>
- <link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link href="public/css/bootstrap.min.css" rel="stylesheet">
 <link href="public/Style.css" rel="stylesheet">
 <script src="public/js/jquery-2.1.0.min.js" type="text/javascript"></script>
 <script src="public/index.js" type="text/javascript"></script>
@@ -10,7 +10,7 @@
 
 <div class="container" id='subhead'>
     <div class="col-md-3">
-        <a href="index.html"><img src="public/img/Logo.png") style="width:200px; height: 80px;"></a>
+        <a onclick='ind()' href='#'><img src="public/img/Logo.png") style="width:200px; height: 80px;"></a>
     </div>
     <div class="col-md-9" id='pp'>
         <p>Parallel Object File System</p>
@@ -23,13 +23,12 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a  href="feature.html">Features</a></li>
+			   	    <li><a  href='#' onclick="ind()"><p>Home</p></a></li>
+                    <li><a  href='#' onclick="feat()"><p>Features</p></a></li>
                     <li><a  href="doc/index.html">Documentation</a></li>
-                    <li><a  href="#">Client API</a></li>
-                    <li><a  href="#">Support</a></li>
-                    <li><a  href="#">Getting Started</a></li>
+                    <li><a  href="doc/index.html#getting-started">Getting Started</a></li>
                     <li><a  href="#">Download</a></li>
-                    <li><a  href="#">Blog</a></li>
+                    <li><a  href="http://actorfs.wordpress.com/">Blog</a></li>
                 </ul>
             </div>
         </div>
@@ -39,73 +38,172 @@
 </head>
 
 <body>
-<div class="container-fluid">
-    <div class="container container1">
-        <pre >
+<div class="container-fluid" >
+    <div class="container container0" id='fea'>
+        <div class="col-md-4">
+            <label class='left-col-1' id='lf1' onclick="left1()">What We Do ...?<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:154px"></label>
+            <label class='left-col-2' id='lf2'  onclick="left2()">Map/Reduce Model<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:136px"></label>
+            <label class='left-col-3' id='lf3'  onclick="left3()">Indexer and Directory Combined<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:50px"></label>
+            <label class='left-col-4' id='lf4'  onclick="left4()">3x Faster Indexer<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:147px"></label>
+            <label class='left-col-5' id='lf5'  onclick="left5()">In-Memory Performance<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:104px"></label>
+            <label class='left-col-6' id='lf6'  onclick="left6()">Parallel Encryption Engine<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:88px"></label>
+            <label class='left-col-7' id='lf7'  onclick="left7()">Perform/Transform Model<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:95px"></label>
+            <label class='left-col-8' id='lf8'  onclick="left8()">Distributed MetaData<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:125px"></label>
+            <label class='left-col-9' id='lf9'  onclick="left9()">Better Multi User Concurrency<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:67px"></label>
+            <label class='left-col-10' id='lf10'  onclick="left10()">Hadoop HCFS and POSIX Compatibility<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:7px"></label>
+            <label class='left-col-11' id='lf11'  onclick="left11()">Parallel Object File System<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:83px"></label>
+            <label class='left-col-12' id='lf12'  onclick="left12()">Parallel Compression Engine<img src="public/img/next.ico") style="width:10px; height:  10px;margin-left:73px"></label>
+        </div>
+
+
+        <div class="col-md-8">
+            <h4>What We Do ...?</h4>
+            <pre>
+//Creates Object File Over Cluster
+val words = Strings("default")
+
+//Puts Code on the File
+
+words << "Hello" << "World" << "!"
+
+val output = new mutable.HashMap[String, Int]
+
+def count(word: String) =
+if (!output.contains(word)) 0 else output(word)
+//Process With Objects
+words {
+      word => output += word -> (count(word) + 1)
+} {
+      input =>
+      input.keys.foreach(
+           word =>
+            output += word -> (input(word) + output(word)))
+       output
+}
+</pre>
+
+            <h4>Map/Reduce Model</h4>
+            <pre>Map Data Before Retrieval (in-place)</pre>
+
+            <h4>Indexer and Directory Combined</h4>
+            <pre> Fast and Parallel File Creation</pre>
+
+            <h4>3x Faster Indexer</h4>
+            <pre>on Memory Mode</pre>
+
+            <h4>In-Memory Performance</h4>
+<pre>88% increase to write throughput, see [Benchmarks]
+20Gbps on a single node</pre>
+
+            <h4>Parallel Encryption Engine</h4>
+<pre>60x Speedup of Encryption without CPU Overhead
+60x Speedup of Encryption without CPU Overhead</pre>
+
+            <h4>Perform/Transform Model</h4>
+<pre>Simplifies Distributed Processing
+Think Small and Execute in the Large</pre>
+
+            <h4>Distributed MetaData</h4>
+<pre>Fast and Parallel File Creation Without Central Directory
+Scaling MetaData Operations</pre>
+
+            <h4>Better Multi User Concurrency</h4>
+<pre>Semi-Ordered Object Streaming Technology
+Multi User Concurrency</pre>
+
+            <h4>Hadoop HCFS and POSIX Compatibility</h4>
+<pre>Seamlessly integrate your Hadoop
+Handle Same Objects through POSIX and HCFS</pre>
+
+            <h4>Parallel Object File System</h4>
+<pre>Memory, Disk and SSD tiering
+Faster parallel scan (Sequential Read)of object collections for
+BigData Analytics
+64K Pages instead of 128M Blocks
+50x Faster with parallel read</pre>
+
+            <h4>Parallel Compression Engine</h4>
+<pre>x27 Speedup on Compression without CPU Overhead
+Lossless Compression for Web and Text Data
+with CUDA Architecture Support</pre>
+
+
+
+        </div>
+    </div>
+</div> 
+
+<div class="container-fluid" >
+    <div class="container container1" id='indx'>
+        <pre class='pre1'>
            <br> <g style='font: 25px BOLD'>ActorFS</g> is a high-throughput and reliable parallel object file system
         </pre>
+		<button id='dlbut'>
+            <a href="#"><img src="public/img/button.ico" style="width=60px; height: 25px;  margin-left:10px; float: left;"></a>
+            Download ActorFS x.0.1
+        </button>
         <!-- features -->
         <h1>Features</h1>
         <div class="row" >
-            <div class="col-md-4"><ul>Map/Reduce Model</ul>
-                <li class="li-body">Map Data Before Retrieval (in-place)</li>
-            </div>
-            <div class="col-md-4"><ul>Indexer and Directory Combined</ul>
-                <li class="li-body">Fast and Parallel File Creation</li>
-            </div>
-            <div class="col-md-4"><ul>3x Faster Indexer</ul>
-                <li class="li-body">on Memory Mode</li>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"><ul>In-Memory Performance</ul>
-                <li class="li-body">88% increase to write throughput, see [Benchmarks]</li>
-                <li class="li-body">20Gbps on a single node</li>
-            </div>
-            <div class="col-md-4"><ul>Parallel Encryption Engine</ul>
-                <li class="li-body">60x Speedup of Encryption without CPU Overhead</li>
-                <li class="li-body">Protects Data over Cloud</li>
-            </div>
-            <div class="col-md-4"><ul>Perform/Transform Model</ul>
-                <li class="li-body">Simplifies Distributed Processing</li>
-                <li class="li-body">Think Small and Execute in the Large</li>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"><ul>Distributed MetaData</ul>
-                <li class="li-body">Fast and Parallel File Creation Without Central Directory</li>
-                <li class="li-body">Scaling MetaData Operations</li>
-            </div>
-            <div class="col-md-4"><ul>Better Multi User Concurrency</ul>
-                <li class="li-body">Semi-Ordered Object Streaming Technology</li>
-                <li class="li-body">Multi User Concurrency</li>
-            </div>
-            <div class="col-md-4"><ul>Hadoop HCFS and POSIX Compatibility</ul>
-                <li class="li-body">Seamlessly integrate your Hadoop</li>
-                <li class="li-body">Handle Same Objects through POSIX and HCFS</li>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4"><ul>Parallel Object File System</ul>
-                <li class="li-body">Memory, Disk and SSD tiering</li>
-                <li class="li-body">Faster parallel scan (Sequential Read)
+		    <div class="col-md-4"><ul>Parallel Object File System</ul>
+                <li>Memory, Disk and SSD tiering</li>
+                <li>Faster parallel scan (Sequential Read)
                     <br>of object collections for</li>
-                <li class="li-body">BigData Analytics</li>
-                <li class="li-body">64K Pages instead of 128M Blocks</li>
-                <li class="li-body">50x Faster with parallel read</li>
+                <li>BigData Analytics</li>
+                <li>64K Pages instead of 128M Blocks</li>
+                <li>50x Faster with parallel read</li>
             </div>
             <div class="col-md-4"><ul>Parallel Compression Engine</ul>
-                <li class="li-body">x27 Speedup on Compression without CPU Overhead</li>
-                <li class="li-body">Lossless Compression for Web and Text Data</li>
-                <li class="li-body">with CUDA Architecture Support</li>
+                <li>x27 Speedup on Compression without CPU Overhead</li>
+                <li>Lossless Compression for Web and Text Data</li>
+                <li>with CUDA Architecture Support</li>
             </div>
-            <div class="col-md-4"></div>
+			<div class="col-md-4"><ul>In-Memory Performance</ul>
+                <li>88% increase to write throughput, see [Benchmarks]</li>
+                <li>20Gbps on a single node</li>
+				<li>3x Faster Indexer</li>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-4"><ul>Parallel Encryption Engine</ul>
+                <li>60x Speedup of Encryption without CPU Overhead</li>
+                <li>Protects Data over Cloud</li>
+            </div>
+            <div class="col-md-4"><ul>Perform/Transform Model</ul>
+                <li>Simplifies Distributed Processing</li>
+                <li>Think Small and Execute in the Large</li>
+            </div>
+			<div class="col-md-4"><ul>Distributed MetaData</ul>
+                <li>Fast and Parallel File Creation Without Central Directory</li>
+                <li>Scaling MetaData Operations</li>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><ul>Better Multi User Concurrency</ul>
+                <li>Semi-Ordered Object Streaming Technology</li>
+                <li>Multi User Concurrency</li>
+            </div>
+		     <div class="col-md-4"><ul>Map/Reduce Model</ul>
+                <li>Map Data Before Retrieval (in-place)</li>
+            </div>
+            <div class="col-md-4"><ul>Indexer and Directory Combined</ul>
+                <li>Fast and Parallel File Creation</li>
+            </div>
+        </div>
+		
+		
+
+		    <div class="row" id='Hadop'>
+		        <img src="public/img/Hadoop1.png") style="width=150px; height: 100px; margin-left:50px; margin-top:10px;margin-right:40px; float:right;" ></a>
+		        <ul>Hadoop HCFS and<br> POSIX Compatibility</ul>
+                <p>SnowStorm was designed to minimize the switching costs for the enterprise clients and has achieved this capability by offering a simple web based interface.  Snowstorm is Hadoop HDFS, and POSIX compatible thus all Hadoop users will use SnowStorm just as they do HDFS, seamlessly.  Legacy Linux Applications such as web server and media and file servers will also interface with the system seamlessly through POSIX interface that is common for such applications.</p>
+			</div>
     </div>
 </div>
-</body>
 
+
+
+</body>
 <div class='container container2'>
      <div class='row'>
          <div class='col-md-5'>
@@ -117,9 +215,6 @@
                          <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico") style="width=20px; height: 23px; margin-top:12px;"></a>
                      </div>
                      <div class="col-md-1">
-                         <a href="https://plus.google.com"><img src="public/img/Google-Plus.ico") style="width=15px; height: 15px; margin-top: 15px;"></a>
-                     </div>
-                     <div class="col-md-1">
                           <a href="https://www.linkedin.com"><img src="public/img/linkedin.ico") style="width=15px; height: 15px; margin-top: 15px;"></a>
                      </div>
                      <div class="col-md-1">
@@ -128,7 +223,7 @@
                  <div class="col-md-5"> </div>
               </div>
          </div>
-         <div class='col-md-7'></div>
+         <div class='col-md-8'></div>
      </div>
 </div>
 
@@ -140,6 +235,5 @@
         <div class='col-md-7'></div>
     </div>
 </div>
-
 
 </html>
