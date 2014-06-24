@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="public/css/bootstrap-responsive.css">
+<link href="public/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="public/Style.css" rel="stylesheet">
+<script src="public/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="public/index.js" type="text/javascript"></script>
+<script src="public/js/bootstrap.js" type="text/javascript"></script>
+<script src="public/js/bootstrap.min.js" type="text/javascript"></script>
+<link  rel="stylesheet" type="text/css" href="public/css/jquery.jqplot.min.css" />
+<script  type="text/javascript" src="public/js/jquery.jqplot.min.js"></script>
+<script language="javascript" type="text/javascript" src="public/js/jqplot.categoryAxisRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="public/js/jqplot.barRenderer.min.js"></script>	
+<script language="javascript" type="text/javascript" src="public/js/jqplot.canvasTextRenderer.min.js"></script>
+<script language="javascript" type="text/javascript" src="public/js/jqplot.canvasAxisLabelRenderer.min.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<div class="container-fluid">
+
+    <div class="row" id='subhead'><img src="public/img/Logo.png" style="width:10%; height: 90%;float:left;">    
+	<p id='pp'>Reactive Object File System for Big Data</p></div>
+    <div class="row" id='mnu'>
+        <label onclick="Home()">Home</label>
+	    <label onclick="Diffrentiators()">Differentiators</label>
+		<label onclick="Benchmark()">Benchmark</label>
+        <label onclick="GS()"> Getting Started</label>
+        <label onclick="Download()">Download</label>
+        <label onclick="Bl()">Blog</label>
+		<label onclick="Mail()">Mailing List</label>
+    </div>
+</div>
+
+</head>
+<body>
+<div class="container-fluid" >
+<div class="row" id='bench'>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Panel heading</div>
+  <div class="panel-body">
+    <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+  </div>
+  <table class="table table-bordered">
+
+	<tr  class='tab-table'>
+        <th > </th>
+        <th ><p>ActorFS</p> </th>
+        <th > <p>HDFS</p></th>
+        <th ><p>iRods</p></th>
+        <th ><p>Ceph</p></th>
+	    <th ><p>GluserFS</p></th>
+        <th ><p>Lustre</p></th> 
+    </tr>
+	<tr>
+		<td class='title'>Architecture  </td> 
+		<td >Shared Nothing/Actor Models </td> 
+		<td >Centralized</td> 
+		<td >Centralized</td>
+		<td >Distributed </td>   
+		<td >Decentralized </td> 
+		<td >Centralized</td>
+	</tr>
+	<tr>
+		<td class='title'>Naming </td> 
+		<td >B-Tree Index</td> 
+		<td >Index</td> 
+		<td >Database</td>
+		<td >CRUSH</td>   
+		<td >EHA</td> 
+		<td >Index</td>
+	</tr>	
+	<tr>
+		<td class='title'>API</td> 
+		<td >FUSE/ Haddop/ SCALA</td> 
+		<td >CLI, FUSE  REST, API</td> 
+		<td >CLI, FUSE API </td>
+		<td >FUSE, mount REST </td>   
+		<td >FUSE, mount</td> 
+		<td >FUSE</td> 
+	</tr>	
+	<tr>
+		<td class='title'>Fault Detection</td> 
+		<td >P2P/ Hierarchical Supervison</td> 
+		<td >Fully connect</td> 
+		<td >P2P</td>
+		<td >Fully connect</td>   
+		<td >Detected</td> 
+		<td >Manually</td> 
+	</tr>	
+	<tr>
+		<td class='title'> System Availability</td> 
+		<td >High</td> 
+		<td >No failover</td> 
+		<td >No failover </td>
+		<td >High </td>   
+		<td >High </td> 
+		<td >Failover</td> 
+	</tr>
+	<tr>
+		<td class='title'>Data Availability</td> 
+		<td >Replicatio </td> 
+		<td >No failover</td> 
+		<td >No failover</td>
+		<td >Replication</td>   
+		<td >RAID-like</td> 
+		<td >No</td> 
+	</tr>
+	<tr>
+		<td class='title'>Placement Strategy</td> 
+		<td >Auto</td> 
+		<td >Auto</td> 
+		<td >Manual</td>
+		<td >Auto</td>   
+		<td >Manual</td> 
+		<td >No</td> 
+	</tr>
+	<tr>
+		<td class='title'>Replication</td> 
+		<td >Async</td> 
+		<td >Async</td> 
+		<td > Sync</td>
+		<td >Sync </td>   
+		<td >Sync </td> 
+		<td >RAID-like</td> 
+	</tr>
+	<tr>
+		<td class='title'>Cache Consistenc</td> 
+		<td >Eventual</td> 
+		<td >WORM, lease </td> 
+		<td >Lock</td>
+		<td >Lock</td>   
+		<td >No</td> 
+		<td >Lock</td> 
+	</tr>
+	<tr>
+		<td class='title'>Load Balamcing</td> 
+		<td >Auto</td> 
+		<td >Auto</td> 
+		<td >Manual</td>
+		<td >Manual</td>   
+		<td >Manual</td> 
+		<td >No</td> 
+	</tr>
+        </table>
+</div>
+		<div id="chart2"   style="height:300px;width:90%; margin-top:150px; margin-left:50px; margin-bottom:130px"></div>
+	</div>
+	<div class="row " id='container2'>
+Contact us:  <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico") style="width=20px; height: 23px;  margin-left: 15px;"></a>
+<a href="https://www.linkedin.com"><img src="public/img/linkedin.ico") style="width=15px; height: 15px; margin-left: 15px;"></a>
+ <a href="https://www.linkedin.com"><img src="public/img/email.ico") style="width=18px; height: 18px;  margin-left: 15px;"></a>
+</div>
+	</div>
+</body>
+
+
+
+<div class='row  under-footer'>
+           <p> &copy; Miras Corporation 2013</p>
+</div>
+
+
+</html>
+<script>
+var chartData = [["19",7], ["20-Jan-2012", 5], ["21-Jan-2012", 6], ["28-Jan-2012", 9]];
+var chartData1 = [["19",10], ["20-Jan-2012", 2], ["21-Jan-2012", 1], ["28-Jan-2012", 4]];
+var chartData2 = [["19",7], ["20-Jan-2012", 8], ["21-Jan-2012", 7], ["28-Jan-2012", 2]];
+
+function PlotChart(chartData) {
+
+    var plot2 = $.jqplot('chart2', [chartData, chartData1, chartData2], {
+        title: 'Mouse Cursor Tracking',
+		axes: {
+		   yaxis: {
+			   label: 'Percentage',
+                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                tickOptions: {
+                    formatString: '%.1f'
+                }
+            },
+            xaxis: {
+                label: 'Population Percentile',				
+                renderer: $.jqplot.CategoryAxisRenderer,
+                tickOptions: {
+                    formatString: '%b %#d'
+                }
+            }
+         
+        },
+	 grid: {
+            background: 'white'
+        },
+		    
+        highlighter: {
+            sizeAdjust: 3
+        },
+        cursor: {
+            show: true
+        },
+     seriesDefaults:{
+            renderer:$.jqplot.BarRenderer,
+            rendererOptions: {
+            fillToZero: true,
+            barPadding: 0,      // number of pixels between adjacent bars in the same group (same category or bin).
+            barDirection: 'vertical', // vertical or horizontal.
+            barWidth: 20,     // width of the bars.  null to calculate automatically.
+            shadowOffset: 0,    // offset from the bar edge to stroke the shadow.   
+			
+        },
+        },
+        series:[
+            {label:'Hotel'},
+            {label:'Event '},
+            {label:'Airfare'}
+        ],
+
+        legend: {
+            show: true,
+			location:'ne',
+            placement: 'outsideGrid',
+        },
+
+    });
+}
+
+PlotChart(chartData, 20);
+$('#chart2 .jqplot-series-canvas:first').css( "z-index", 9);
+</script>

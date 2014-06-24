@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuration File &mdash; ActorFS v1.0.0-RC1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     'v1.0.0-RC1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="ActorFS v1.0.0-RC1 documentation" href="../index.html" />
+    <link rel="next" title="&lt;no title&gt;" href="topicstobewritten.html" />
+    <link rel="prev" title="Getting Started on Ubuntu x64" href="started.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="topicstobewritten.html" title="&lt;no title&gt;"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="started.html" title="Getting Started on Ubuntu x64"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">ActorFS v1.0.0-RC1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configuration-file">
+<h1>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h1>
+<p>The configuration file is located at:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ vim /etc/tornado/snow.config
+</pre></div>
+</div>
+<p>The default configuration is:</p>
+<div class="highlight-python"><div class="highlight"><pre>snow{
+    node{
+        data{
+            dir =  &quot;/var/lib/tornado/snow/data&quot;
+            files = [&quot;/var/lib/tornado/snow/data/default&quot;]
+            }
+        config  {
+             file=&quot;/etc/tornado/snow.config&quot;
+                }
+        home=&quot;/var/lib/tornado/snow&quot;
+        log{
+            default=&quot;/var/log/tornado/snow/snow.log&quot;
+            security=&quot;/var/log/tornado/snow/security.log&quot;
+            request=&quot;/var/log/tornado/snow/request.log&quot;
+            }
+        lib=&quot;/usr/lib/tornado/lib/snow&quot;
+        }
+    copyright = &quot;/usr/share/doc/snow/copyright&quot;
+    }
+snow.seeds = [&quot;akka.tcp://SnowStorm@localhost:3830&quot;]
+# snow.seeds = [&quot;akka.tcp://SnowStorm@localhost:3830&quot;,&quot;akka.tcp://SnowStorm@HOSTNAME:3830&quot;]
+# snow.node.endpoint.port = 3830
+# snow.node.endpoint.hostname = &quot;localhost&quot;
+</pre></div>
+</div>
+<p>to add another node to the system the user need to add address to <tt class="docutils literal"><span class="pre">snow.seeds</span></tt> list. to do so
+uncomment the other and comment the default of to enable <tt class="docutils literal"><span class="pre">HOSTNAME</span></tt> to join to the system.
+subsituate <tt class="docutils literal"><span class="pre">HOSTNAME</span></tt> with address or resolveable name of the second node. for example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># snow.seeds = [&quot;akka.tcp://SnowStorm@localhost:3830&quot;]</span>
+<span class="n">snow</span><span class="o">.</span><span class="n">seeds</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;akka.tcp://SnowStorm@n1.cluster.example.com:3830&quot;</span><span class="p">,</span><span class="s">&quot;akka.tcp://SnowStorm@n2.cluster.example.com:3830&quot;</span><span class="p">]</span>
+<span class="n">snow</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">endpoint</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">3830</span>
+<span class="n">snow</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">endpoint</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="s">&quot;n1.cluster.example.com&quot;</span>
+</pre></div>
+</div>
+<p>in the second node add this confiduration:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">snow</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">endpoint</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">3830</span>
+<span class="n">snow</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">endpoint</span><span class="o">.</span><span class="n">hostname</span> <span class="o">=</span> <span class="s">&quot;n2.cluster.example.com&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="data-files">
+<h2>Data Files<a class="headerlink" href="#data-files" title="Permalink to this headline">¶</a></h2>
+<p>The system autmomaticly stores data file in:</p>
+<div class="highlight-python"><div class="highlight"><pre>/var/lib/tornado/snow/data
+</pre></div>
+</div>
+<p>To change the location set the new path with the variable <tt class="docutils literal"><span class="pre">snow.node.data.dir</span></tt>
+By default this directory is exclusively restricted to the user <tt class="docutils literal"><span class="pre">snow</span></tt>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration File</a><ul>
+<li><a class="reference internal" href="#data-files">Data Files</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="started.html"
+                        title="previous chapter">Getting Started on Ubuntu x64</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="topicstobewritten.html"
+                        title="next chapter">&lt;no title&gt;</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/howto/configs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="topicstobewritten.html" title="&lt;no title&gt;"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="started.html" title="Getting Started on Ubuntu x64"
+             >previous</a> |</li>
+        <li><a href="../index.html">ActorFS v1.0.0-RC1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Miras Technologies International.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

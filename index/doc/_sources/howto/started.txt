@@ -1,0 +1,108 @@
+Getting Started on Ubuntu x64
+=============================
+
+In this tutorial we explain how ActorFS will be installed on ubuntu box. We choosed ubuntu 64 bit, for other systems
+we follow installation topic. ActorFS is designed to easily installed and administrated.
+
+System Requirements
+-------------------
+
+For this installation we need an ubuntu machine having enough disk capacity to test 1GB data operations. Also the user may
+use lower amount of space but functonalities will be limited. Minimum disk size to have ActorFS functional is 128MB, we
+have supposed page sized are default on 64KB.
+
++------------+------------------+-----------+
+| Requirement| Details          | Version   |
++============+==================+===========+
+| OS         | Ubuntu           |13.04 x64  |
++------------+------------------+-----------+
+| JVM        | openjdk-7-jre                |
++------------+------------------+-----------+
+| ActorFS    | 1.0              |           |
++------------+------------------+-----------+
+
+
+Getting ActorFS
+---------------
+To download actor fs put following code on command line
+
+.. code:: bash
+
+  $> wget https://dl.actorfs.org/latest/actorfs.tar.gz
+  $> tar -xzvf actorfs.tar.gz
+
+If apt-get is available you may choose this way:
+
+.. code:: bash
+
+  $> echo 'deb http://archive.actorfs.org/ubuntu rain main' | sudo tee /etc/apt/sources.list.d/actorfs.list
+  $> sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+  $> sudo apt-get update
+  $> sudo apt-get install actorfs
+
+Using apt-get is safe because this use data files from the previous installed version. also it is possible to flush
+data files, see ... for more information. This operation may be used to update the system regularly when any patch is
+available or any bug fix or even new version. ActorFS is supposed to be backward compatible only for minor versions
+see more.
+
+You have installed actor fs upon finishing apt-get
+
+
+ActorFS Service
+---------------
+To start and stop the service use:
+
+.. code:: bash
+
+  $> sudo service actorfs start
+  $> sudo service actorfs stop
+  $> sudo service actorfs restart
+
+
+Default Configuration
+---------------------
+
+ActorFS ships with default configuration however the user may change them. The main configuration file will be found on
+
+.. code:: bash
+
+  $> cat /etc/tornado/snow.config.example
+  $> cat /etc/tornado/snow.config
+
+
+Log Files
+---------
+Log files are acessable through this location:
+
+.. code:: bash
+
+  $> cat /etc/tornado/snow.config.example
+  $> cat /etc/tornado/snow.config
+
+
+JVM Options
+-----------
+
+Default option are ::
+
+  # location of java
+  JAVA=/usr/bin/java
+
+  # arguments to pass to java
+  JAVA_ARGS="-Xmx512M -XX:MaxPermSize=256M -Djava.net.preferIPv4Stack=true"
+  #JAVA_ARGS="-Djava.net.preferIPv4Stack=true" # make jenkins listen on IPv4 address
+
+  PIDFILE=/var/run/tornado/snow.pid
+
+  # user id to be invoked as (otherwise will run as root; not wise!)
+  SNOW_USER=snow
+
+  # location of the jenkins war file
+  SNOW_JAR=/usr/lib/tornado/lib/snow/snow.jar
+
+  # jenkins home location
+  SNOW_HOME=/var/lib/tornado/snow
+
+to change this the user need to edit default file located at ::
+
+  $> vim /etc/default/actorfs

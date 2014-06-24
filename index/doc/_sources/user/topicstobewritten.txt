@@ -1,0 +1,57 @@
+Intriduction
+============
+
+Benefits
+--------
+
+Features
+========
+
+Platform Independent
+--------------------
+
+Compression
+-----------
+
+Modularity
+==========
+
+
+
+Object System
+=============
+
+Basic IO Operations
+-------------------
+
+Streaming
+---------
+
+Pipe File
+---------
+
+Page System
+===========
+
+read
+----
+
+File System
+===========
+
+HCFS interface for Hadoop and Spark
+-----------------------------------
+
+POSIX interface with  FUSE
+--------------------------
+
+Using Samba Services
+====================
+
+
+
+Usage Scenarios
+===============
+
+Loading Data from MySQL
+-----------------------
