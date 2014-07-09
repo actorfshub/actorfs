@@ -40,10 +40,9 @@
 <div class="row" id='bench'>
 
 <div class="panel panel-default">
-  <div class="panel-heading">Panel heading</div>
+  <div class="panel-heading">Comparison Table</div>
   <div class="panel-body">
-    <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-  </div>
+   </div>
   <table class="table table-bordered">
 
 	<tr  class='tab-table'>
@@ -165,68 +164,3 @@ Contact us:  <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico
 
 
 </html>
-<script>
-var chartData = [["19",7], ["20-Jan-2012", 5], ["21-Jan-2012", 6], ["28-Jan-2012", 9]];
-var chartData1 = [["19",10], ["20-Jan-2012", 2], ["21-Jan-2012", 1], ["28-Jan-2012", 4]];
-var chartData2 = [["19",7], ["20-Jan-2012", 8], ["21-Jan-2012", 7], ["28-Jan-2012", 2]];
-
-function PlotChart(chartData) {
-
-    var plot2 = $.jqplot('chart2', [chartData, chartData1, chartData2], {
-        title: 'Mouse Cursor Tracking',
-		axes: {
-		   yaxis: {
-			   label: 'Percentage',
-                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                tickOptions: {
-                    formatString: '%.1f'
-                }
-            },
-            xaxis: {
-                label: 'Population Percentile',				
-                renderer: $.jqplot.CategoryAxisRenderer,
-                tickOptions: {
-                    formatString: '%b %#d'
-                }
-            }
-         
-        },
-	 grid: {
-            background: 'white'
-        },
-		    
-        highlighter: {
-            sizeAdjust: 3
-        },
-        cursor: {
-            show: true
-        },
-     seriesDefaults:{
-            renderer:$.jqplot.BarRenderer,
-            rendererOptions: {
-            fillToZero: true,
-            barPadding: 0,      // number of pixels between adjacent bars in the same group (same category or bin).
-            barDirection: 'vertical', // vertical or horizontal.
-            barWidth: 20,     // width of the bars.  null to calculate automatically.
-            shadowOffset: 0,    // offset from the bar edge to stroke the shadow.   
-			
-        },
-        },
-        series:[
-            {label:'Hotel'},
-            {label:'Event '},
-            {label:'Airfare'}
-        ],
-
-        legend: {
-            show: true,
-			location:'ne',
-            placement: 'outsideGrid',
-        },
-
-    });
-}
-
-PlotChart(chartData, 20);
-$('#chart2 .jqplot-series-canvas:first').css( "z-index", 9);
-</script>
