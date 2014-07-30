@@ -15,15 +15,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <div class="container-fluid">
 
-    <div class="row" id='subhead'><img src="public/img/Logo.png" style="width:10%; height: 90%;float:left;">    
+    <div class="row" id='subhead'><img src="public/img/Logo.png" style="width:11.5%; height: 90%;float:left;">    
 	<p id='pp'>Reactive Object File System for Big Data</p></div>
     <div class="row" id='mnu'>
         <label onclick="Home()">Home</label>
 	    <label onclick="Diffrentiators()">Differentiators</label>
 		<label onclick="Benchmark()">Benchmark</label>
         <label onclick="GS()"> Getting Started</label>
-        <label onclick="Download()">Download</label>
-        <label onclick="Bl()">Blog</label>
+        <label onclick="http://www.actorfs.com/#!support/c3vn">Request a Trial</label>
 		<label onclick="Mail()">Mailing List</label>
     </div>
 </div>
@@ -34,152 +33,175 @@
 <div class="container-fluid" >
 <div class="row" id='fea'>
 
-<div class="col-lg-4 col-xs-4" id='fea-left'>
-		<ul>
-            <li class='left-col-1' id='lf1' onclick="left1()">ActorFS Data Sheet</li>
-            <li class='left-col-2' id='lf2' onclick="left2()">Problems with Big Data </li>
-            <li class='left-col-3' id='lf3' onclick="left3()">Principles of Design</li>
-			<li class='left-col-4' id='lf4' onclick="left4()">Simplicity </li>
-            <li class='left-col-5' id='lf5' onclick="left5()">BigData in Mind</li>
-            <li class='left-col-6' id='lf6' onclick="left6()">Fusion of File & Object Concept</li>
-            <li class='left-col-7' id='lf7' onclick="left7()">1-Byte File Support</li>
-            <li class='left-col-8' id='lf8' onclick="left8()">Simplicity</li>
-            <li class='left-col-9' id='lf9' onclick="left9()">No-Directory but Distributed Index</li>
-            <li class='left-col-10' id='lf10' onclick="left10()">Fast and Parallel File Creation</li>
-            <li class='left-col-11' id='lf11' onclick="left11()">Eliminate Index Complexities </li>
-            <li class='left-col-12' id='lf12' onclick="left12()">Object Serialization</li>
-			<li class='left-col-13' id='lf13' onclick="left13()">Console</li>
-			<li class='left-col-14' id='lf14' onclick="left14()">In-Memory Performance</li>
-			<li class='left-col-15' id='lf15' onclick="left15()">20Gbps on a single node </li>
-			<li class='left-col-16' id='lf16' onclick="left16()">Stream Encryption & Compression Engine</li>
-		    <li class='left-col-17' id='lf17' onclick="left17()">Perform/Transform Model </li>
-		    <li class='left-col-18' id='lf18' onclick="left18()">Distributed Metadata </li>
-		    <li class='left-col-19' id='lf19' onclick="left19()">Semi-Ordered Object Streaming</li>
-		    <li class='left-col-20' id='lf20' onclick="left20()">Hadoop & Spark Integration</li>
-		    <li class='left-col-21' id='lf21' onclick="left21()">Parallel Object File System</li>
-		    <li class='left-col-22' id='lf22' onclick="left22()">Objects & JSON</li>
-		    <li class='left-col-23' id='lf23' onclick="left23()">Responsive on Parallel Read</li>
-		<ul>		
-        </div>
+  <div id="sidebar-wrapper" class="col-lg-4 col-xs-4">
+            <div id="sidebar">
+                <ul class="nav list-group">
+                    <li><a class="list-group-item" id='lf1'  onclick='left1()'><i class="icon-home icon-1x"></i>ActorFS Data Sheet</a></li>
+                    <li><a class="list-group-item" id='lf2'  onclick='left2()'><i class="icon-home icon-1x"></i>Problems with Big Data</a></li>
+                    <li><a class="list-group-item" id='lf3'  onclick='left3()'><i class="icon-home icon-1x"></i>Principles of Design</a></li>
+                    <li><a class="list-group-item" id='lf4'  onclick='left4()'><i class="icon-home icon-1x"></i>Simplicity </a></li>
+                    <li><a class="list-group-item" id='lf5'  onclick='left5()'><i class="icon-home icon-1x"></i>With BigData in Mind</a></li>
+                    <li><a class="list-group-item" id='lf6'  onclick='left6()'><i class="icon-home icon-1x"></i>Fusion of File & Object Concept</a></li>
+                    <li><a class="list-group-item" id='lf7'  onclick='left7()'><i class="icon-home icon-1x"></i>1-Byte File Support</a></li>
+                    <li><a class="list-group-item" id='lf8'  onclick='left8()'><i class="icon-home icon-1x"></i>No-Directory but Distributed Index</a></li>
+                    <li><a class="list-group-item" id='lf9'  onclick='left9()'><i class="icon-home icon-1x"></i>Fast and Parallel File Creation</a></li>
+                    <li><a class="list-group-item" id='lf10' onclick='left10()'><i class="icon-home icon-1x"></i>Eliminate Index Complexities</a></li>
+                    <li><a class="list-group-item" id='lf11' onclick='left11()'><i class="icon-home icon-1x"></i>Object Serialization</a></li>
+                    <li><a class="list-group-item" id='lf12' onclick='left12()'><i class="icon-home icon-1x"></i>Console</a></li>
+                    <li><a class="list-group-item" id='lf13' onclick='left13()'><i class="icon-home icon-1x"></i>In-Memory Performance</a></li>
+                    <li><a class="list-group-item" id='lf14' onclick='left14()'><i class="icon-home icon-1x"></i>20Gbps on a single node </a></li>
+                    <li><a class="list-group-item" id='lf15' onclick='left15()'><i class="icon-home icon-1x"></i>Stream Encryption & Compression Engine</a></li>
+                    <li><a class="list-group-item" id='lf16' onclick='left16()'><i class="icon-home icon-1x"></i>Perform/Transform Model</a></li>
+                    <li><a class="list-group-item" id='lf17' onclick='left17()'><i class="icon-home icon-1x"></i>Distributed Metadata</a> </li>
+                    <li><a class="list-group-item" id='lf18' onclick='left18()'><i class="icon-home icon-1x"></i>Semi-Ordered Object Streaming</a></li>
+                    <li><a class="list-group-item" id='lf19' onclick='left19()'><i class="icon-home icon-1x"></i>Hadoop & Spark Integration</a></li>
+                    <li><a class="list-group-item" id='lf20' onclick='left20()'><i class="icon-home icon-1x"></i>Parallel Object File System</a></li>
+                    <li><a class="list-group-item" id='lf21' onclick='left21()'><i class="icon-home icon-1x"></i>Objects & JSON</a></li>
+                    <li><a class="list-group-item" id='lf22' onclick='left22()'><i class="icon-home icon-1x"></i>Responsive on Parallel Read</a></li>
+                </ul>
+            </div>
+	
+        </div> 
+
 
         <div class="col-lg-8 col-xs-8" id='fea-right'>
             <h2 id='Actor'><g style='font: 25px BOLD; '>Actor<m style='color: #e36c0a;'>FS</m> Data Sheet</h2>
            <h6>Reactive Object File System for Big Data </h6>
-			<h6>Advantages Gives, Problems Solve</h6>
+			<h6>Advantages Provided, Problems Solved</h6>
 			
-<br><p>ActorFS is a reactive cluster object file system for big data, giving variety of interfaces that are POSIX, HCFS, REST, AKKA interface and Scala/Java API to store files and objects. Peer to peer for elasticity, shared-nothing for reliability, reactive to be asynchronous and non-blocking to have better use of multi-core architectures. With fully distributed asynchronous copy-on-write indexer to support massive amount of small file and object creation in-memory, over-disk and with-SSD and to leveraging redundancies in cluster devices with parallel journaling.</p>
-<p>ActorFS is based on reactive architecture using Scala/Akka that is 5th generation of software architectures that makes it ideal for internet of things and big data bye giving more flexibility and control of resources. ActorFS has pure Scala/Akka interfaces to seamlessly integrate without performance lost with large scale applications of geographically distributed analytical and connectivity services of Internet of Things. Also reduces problems with compression, encryption using stream processor adaptation at the core system. With ActorFS developers are productive, CPU is cool and administrators are happy and resources are under control.</p>
+<br><p>ActorFS is a reactive cluster object file system for big data, giving variety of interfaces such as POSIX, HCFS, REST, AKKA interface and Scala/Java API to store files and objects. Peer to peer for elasticity, shared-nothing for reliability, reactive to be asynchronous and non-blocking to have better use of multi-core architectures. With fully distributed asynchronous copy-on-write indexer to support massive amount of small file and object creation in-memory, over-disk and with-SSD and to leveraging redundancies in cluster devices with parallel journaling.</p>
+<p>ActorFS is based on reactive architecture using Scala/Akka that makes it ideal for Internet of Things and big data by giving more flexibility and control of resources. ActorFS has pure Scala/Akka interfaces to seamlessly integrate without performance loss with large scale applications for geographically distributed analytical and connectivity services of Internet of Things. It reduces problems with compression, encryption using stream processor adaptation at the core system.  </p>
+<p>With ActorFS developers are productive, CPU is cool and administrators are happy and resources are under control.</p>
 
 <h4 id='Problems'>Problems with Big Data</h4>
-<p>The problem is "Growing Big Data" with growing challenges in variety, velocity, volume and veracity 
-At the Storage, Problems with Big Data are
+<p>The problem is "Growing Big Data" with growth, challenges in variety, velocity, and veracity increase significantly.
 
-<ul>
+<ul>At the Storage, Problems with Big Data are
 <li><span class='bld'>Volume</span> of Data, Volume of Users, of Machines 
 <li><span class='bld'>Variety</span> of Data, Variety of Machines, of Devices, of Applications, of Faults and of Interfaces
 <li><span class='bld'>Velocity</span> of Data, of Requests, of Growth, of Changes
 <li><span class='bld'>Veracity</span> of Data, of Control, of Utilities
 </ul>
 </p>
-<p >With ActorFS all problems are opportunities too! If we had software to convert these problems to opportunity we would be happy! If we had support of different storage mediums and machines in a single cluster ranging from ram to disk and SSD we  may choose from them easily for our complex algorithms. If we had easy consoles to add, remove and change attributes of data within our run time we where more productive of control of variety of machines.</p>
-<p>ActorFS is designed with Big Data in mind. Big Data operations are time taking that stresses rotational disks and network bandwidth. ActorFS enables applications to expand on memory for random workloads such as media streaming or multi stage computing or expand sequentially over-disk for maximum performance of rotational disks.</p>
-<p>Also when number of users of the file systems is large that makes the system slow on random access and search. The file system is highly optimized for time taking work-loads on rotational disks also with multiple users at the same time specially on stress periods. The highly optimized schedules allows different application on a same cluster using rapid and distributed volume management giving multi tenant separation of concerns at the data organization layer.</p>
-<p>ActorFS grasps main principles of reactiveness. ActorFS operates non-blocking and asynchronous to be scalable and parallel to participate on high throughput and time talking data processing tasks specially through HCFS interface. Is fault tolerant, elastic on scale, responsive through fine grained data pages. Semi-Ordered-ness on object collections eliminates contention over disk control between several users in the same time that increases throughput of data retrieval and prevents system from dramatic performance drop on multi-user access. ActorFS is equipped with semi-ordered sets to eliminate contentions on simultaneous access over object collections that is common in large big data installations.</p>
+<p>ActorFS is the first distributed file system that addresses these issues in a significant way for storage of big data. It supports different storage mediums and machines in a single cluster ranging from ram to disk and SSD.  It allows choice from them easily for complex algorithms. ActorFS provides an easy console to add, remove and change attributes of data within desired run time making the user more productive in controlling variety of machines.</p>
+<p>ActorFS is designed with Big Data in mind. Big Data operations are time consuming and stress rotational disks and network bandwidth. ActorFS enables applications to expand on memory for random workloads such as media streaming or multi stage computing or expand sequentially over-disk for maximum performance of rotational disks.</p>
+<p>Also when number of users of the file systems is large that makes the system slow on random access and search. The file system is highly optimized for time taking work-loads on rotational disks also with multiple users at the same time especially on stress / high demand periods. The highly optimized schedules allows different application on a same cluster using rapid and distributed volume management giving multi-tenant separation of concerns at the data organization layer.</p>
+<p>ActorFS is designed with main principles of reactiveness. ActorFS operates non-blocking and asynchronously to be scalable and parallel to participate on high throughput and time talking data processing tasks specially through HCFS interface. It is fault tolerant, elastic on scale, responsive through fine grained data pages. Semi-Ordered-ness on object collections eliminates contention over disk control between several users in the same time that increases throughput of data retrieval and prevents system from dramatic performance drop on multi-user access. ActorFS is equipped with semi-ordered sets to eliminate contentions on simultaneous access over object collections that is common in large big data installations.</p>
 <h4 id='Principles'>Principles of Design</h4>
-<p>Applications that are challenged by volume, velocity, variety and veracity of data are common today that occasionally made developers and administrators to be innovative to solve problems. Ultimate goal of ActorFS is high reliability and elastic scalability that are essential attributes of a reactive big data system. Trying to reduce utility coding, enabling developers to do more with less code, data transfers between different data layers, enabling applications to share disk storages for different purposes in a multi-tenant fashion. Directives are:</p>
+<p>Applications that are challenged by volume, velocity, variety and veracity of data are common today.  Ultimate goal of ActorFS is high reliability and elastic scalability that are essential attributes of a reactive big data system. Trying to reduce utility coding, enabling developers to do more with less code, data transfers between different data layers, enabling applications to share disk storages for different purposes in a multi-tenant fashion. The Design Directives used for ActorFS are:</p>
 <h5>Separation Principle</h5>
-<p>Program as when you program for small data with a very fast processor </p>
-<p>This principles tries to simplify App creation without dealing with large volume of data. We need pre-built data structures and runtime to support this philosophy. Add more language structures to deal with volume and velocity problem is preferred to manually reform algorithms according to new system of execution. According to this principle volume and velocity is problem of computing machines not the algorithm itself. Thinking for algorithms need to be separated from thinking of the computing platform. This principles makes developer tasks more easier and tends to more testable and debug able applications. </p>
+<p>Program as when you program for small data with a very fast processor</p>
+<p>This principles tries to simplify App creation without dealing with large volume of data. We need pre-built data structures and runtime to support this philosophy. Add more language structures to deal with volume and velocity problem is preferred to manually reform algorithms according to new system of execution. According to this principle volume and velocity is problem of computing machines not the algorithm itself. Thinking for algorithms need to be separated from thinking of the computing platform. This principles makes developer tasks easier and helps in faster design and building of more testable and debug able applications.</p>
 <h5>Data Attribute Principle </h5>
 <p>Attributes of Data stored on the engine may be changed dynamically at runtime. </p>
-<p>For example the engine may be enforced to use SSD for sample data set or to pin on memory for another, or control over compression. </p>
+<p>For example the engine may be enforced to use SSD for sample data set or to pin on memory for another, or control over compression.</p>
 <h5>Workload Principle </h5>
-<p>We think for Storage Engine and Job Distribution Framework for Responsive Analytical and Time Taking Applications </p>
-<p>Dealing with volume and velocity and volatility are more engineering problems. variety is not controllable and depends on the nature of data. We are going to build platforms to shift focus of data workers to variety and quality of algorithms they do to support more variant of data types This engine need to behave in a controllable manner to be adjusted according to the running algorithm. </p>
-<p>Less latency is needed for responsive applications. The system uses different applications and workloads </p>
+<p>We think for Storage Engine and Job Distribution Framework for Responsive Analytical and Time Taking Applications</p>
+<p>Dealing with volume and velocity and volatility are more engineering problems. variety is not controllable and depends on the nature of data. ActorFS is designed to shift the focus of data workers to variety and quality of algorithms they do to support more variant of data types.  This engine behaves in a controllable manner to be adjusted according to the running algorithm.</p>
+<p>Less latency is needed for responsive applications. </p>
+
 <h5>Access Principle </h5>
-<p>The system supports concurrent users and different concurrent jobs from different parties. </p>
-<p>We have used semi-ordered sets to better manage analytical workloads in large clusters. </p>
+<p>The system supports concurrent users and different concurrent jobs from different parties.</p>
+<p>We have used semi-ordered sets to better manage analytical workloads in large clusters.</p>
+<p></p>
+
 <h5>Bounding Principle </h5>
-<p>A system that gives better result when enough time is given and gives low graded results when less resources it has. </p>
-<p>So we choose Actor model to have full control of the storage system to enforce SLAs needed. This makes system best suited for multi-tenant and multi user systems. </p>
+<p>Most systems give better results when enough time is given and give lower grad results when less resources are available to it.  ActorFS utilizes the Actor model to have full control of the storage system to enforce SLAs needed. This makes ActorFS best suited for multi-tenant and multi user systems.</p>
 <p>Advantages of the System are:</p>
+
+
 <h4 id='Simplicity'>Simplicity</h4>
-<p>ActorFS eliminates complexities of traditional cluster file systems with a simple console. The console is the only place users, administrators and developers need to know of. Nice helps on commands and guide lines are added to make troubles less. The console has a multi-platform command line interface to be ubiquitous and pervasive. The file system has a tutorial designed for basic users that guides them step-by-step at the command line to learn different parts of the system. </p>
-<p>ActorFS is fully automatic in rare tasks and is highly configurable but lefts them for advanced users. The console is capable to run Scala programs in-line or through script files. The user may program the file system, set timers, add, remove or delete collections or make topology changes and emulation left for advanced users. The API makes the file system extendable through direct access to page layer. </p>
-<h4 id='BigData'>BigData in Mind </h4>
-<p>BigData tasks are time taking on large volumes with stress on rotational disks and huge usage of network bandwidth. The other side is when number of users of the file systems is large that makes the system to suffer from random access and search. ActorFS is designed with Big Data in mind. With asynchronous design is highly optimized for time taking work-loads and multiple users at the same time specially on stressed periods. ActorFS is equipped with semi-ordered sets to eliminate contentions on simultaneous access over object collections. Semi-Ordered-ness on Object Collections eliminates contention over disk control between several users in the same time that increases throughput of data retrieval and prevents system from dramatic performance drop on multi-user access. </p>
-<p>Also the system gives a fast indexer that is used for directory system too. The indexer is created  per volume helping users to store data on pure files and objects and eliminate need for database systems on top of the file system. The user may choose in-memory volumes to have maximum performance and experience distributed memory layer of their applications as simple as possible. </p>
-<p>Grasps principles of reactive systems and allows the core system to be asynchronous to coming requests. this feature makes the system resilient. </p>
-<h4 id='Fusion'>Fusion of File & Object Concept </h4>
-<p>ActorFS fuses file and object concept by integrating three different layer of storage on a single system that are Page System, Object System and File System. Fusion of highly coupled data layers makes the system more efficient on performance optimization, reducing duplications on networking, better management of fault in different layers of the system and giving simplicity of application development and data attribute controls such as storage medium selection. </p>
-<h4 id='Byte'>1-Byte File Support </h4>
-<p>ActorFS is designed to scale on large number of files and encourages to create file when needed even for 1-Byte of data. The storage engine is efficient enough to handle large files even petabytes for single file, object sets, and object collection on top of the file system. ActorFS uses a fast indexer to eliminate need for intra-file indexing and encourage users to create files for any value needed. </p>
-<p>To differentiate form No-SQL specially key-value stores, ActorFS gives similar functionality but at the lowest possible level of data storage to boost performance. Benchmarks shows 420K object insert and 600K in-memory read of different files in a single node deployment on a mid level laptop and is scalable linearly on cluster deployment. Also small file supports eliminate unnecessary ID-to-PhysicalLocation translation that is common traditional indexers. 1-Byte file concept is ideal for internet of things too. </p>
-<h4 id='Simpl'>Simplicity</h4>
+<p>ActorFS eliminates complexities of traditional cluster file systems with a simple console. The console is the only place users, administrators and developers need to know. Help with commands and guidelines are added to ease the work. The console has a multi-platform command line interface to be ubiquitous and pervasive. The file system has a tutorial designed for basic users that guides them step-by-step at the command line to learn different parts of the system.</p>
+<p>ActorFS is fully automatic in rare tasks and is highly configurable for advanced users. The console is capable to run Scala programs in-line or through script files. The user may program the file system, set timers, add, remove or delete collections to make topology changes and emulation is available for advanced users. The API makes the file system extendable through direct access to page layer.</p>
 <p>ActorFS is compatible with Java Runtime 8 and previous versions. ActorFS v0.1.0-SNAPSHOT is compiled with Scala 2.10.4 and Akka 2.2.3. </p>
-<p>
-<ul>
-<li>ActorFS may be used on desktop, high-end or low-end rack mounts, or commodity and off the shelf.
-<li>ActorFS is optimized to operate on High-end servers, is capable to handle more than 2 millions message per second per commodity node 
-</ul>
-</p>
+<p>ActorFS may be used on desktop, high-end or low-end rack mounts, or commodity and off the shelf.</p>
+<p>ActorFS is optimized to operate on High-end servers, is capable to handle more than 2 millions message per second per commodity node </p>
+
+
+<h4 id='BigData'>With BigData in Mind </h4>
+<p>BigData tasks are time consuming on large volumes with stress on rotational disks and huge usage of network bandwidth. The other consideration is when the number of users of the file systems is large.  Typically that makes most systems suffer from big lags in response time for random access and search. ActorFS’ asynchronous design is highly optimized for time consuming work-loads and multiple users at the same time specially on stressed periods. ActorFS is equipped with semi-ordered sets to eliminate contentions on simultaneous access over object collections. Semi-Ordered-ness on Object Collections eliminates contention over disk control between several users in the same time that increases throughput of data retrieval and prevents system from dramatic performance drop on multi-user access.</p>
+<p>Also the system gives a fast indexer that is used for directory system too. The indexer is created per volume helping users to store data on pure files and objects and eliminate need for database systems on top of the file system. The user may choose in-memory volumes to have maximum performance and experience distributed memory layer of their applications as simple as possible.</p>
+<p>ActorFS Grasps principles of reactive systems and allows the core system to be asynchronous to coming requests. This feature makes the system resilient.</p>
+
+
+<h4 id='Fusion'>Fusion of File & Object Concept </h4>
+<p>ActorFS fuses file and object concept by integrating three different layers of storage on a single system. These layers are Page System, Object System and File System. Fusion of highly coupled data layers makes the system more efficient on performance optimization, reducing duplications on networking, and better management of fault in different layers of the system and giving simplicity of application development and data attribute controls such as storage medium selection.</p>
+
+
+<h4 id='Byte'>1-Byte File Support </h4>
+<p>ActorFS is designed to scale on large number of files and easily creates a file when needed even for 1-Byte of data. The storage engine is efficient enough to handle large files even petabytes for single file, object sets, and object collection on top of the file system. ActorFS uses a fast indexer to eliminate need for intra-file indexing and encourage users to create files for any value needed.</p>
+<p>To differentiate from No-SQL specially key-value stores, ActorFS gives similar functionality but at the lowest possible level of data storage to boost performance. Benchmarks show 420K object insert and 600K in-memory read of different files in a single node deployment on a midlevel laptop and is scalable linearly on cluster deployment. Also small file supports eliminate unnecessary ID-to-Physical Location translation that is common in traditional indexers. 1-Byte file concept is ideal for internet of things too.</p>
+
+
 <h4 id='Directory'>No-Directory but Distributed Index </h4>
-<p>ActorFS is equipped with a highly optimized and fast indexing engine that is capable to operate over-disk, in-memory or with-SSD. The Indexer is used to manage directories and files also is used to map keys and values. So the Indexer makes small files possible through key value mapping. </p>
-<p>ActorFS double uses B-Tree Index to find files and objects. The index is designed to have small portion of data below 4KBs to eliminate unnecessary lookups of random access applications. with this capability is highly elastic and transactional for small portion of data but is non-transactional but atomic on large collection. </p>
-<p>The Indexer is used to find anything in ActorFS. The indexer is designed to grow to billion billions of names mapped to objects or files. The indexer simplifies scalability on the file system. Traditionally file systems prevent the user to search on data. because database systems or indexer are not aware of the file system and may use it in wrong way dropping performance or some times make risk on reliability. To Solve this problem ActorFS is equipped with a fast, fully distributed indexing engine to facilate for file system, object system and also give it to the user to use it to create mapping from what they want to any file or objects. </p>
-<p>The indexer is in-memory for in-memory volumes to operate at maximum performance level. </p>
+<p>ActorFS is equipped with a highly optimized and fast indexing engine that is capable to operate over-disk, in-memory or with-SSD. The Indexer is used to manage directories and files. It is used to map keys and values. So the Indexer makes small files possible through key value mapping.</p>
+<p>ActorFS double uses B-Tree Index to find files and objects. The index is designed to have small portion of data below 4KBs to eliminate unnecessary lookups of random access applications. ActorFS with this capability is highly elastic and transactional for small portion of data and is non-transactional but atomic on large collection.</p>
+<p>The Indexer is used to find anything in ActorFS. The indexer is designed to grow to billion billions of names mapped to objects or files. The indexer simplifies scalability on the file system. Traditionally file systems prevent the user from direct search on data. Because database systems or indexers are not aware of the file system and may use it in wrong way dropping performance or sometimes increasing the reliability risks. To solve this problem ActorFS is equipped with a fast, fully distributed indexing engine available for file system, object system and also give it to the user to use it to create mapping from what they want to any file or objects.</p>
+<p>The indexer is in-memory for in-memory volumes to operate at maximum performance level.</p>
+
 <h4 id='Fast'>Fast and Parallel File Creation </h4>
-<p>ActorFS is capable to create small files in parallel. With a cluster of 16 commodity node is capable to produce more than 10 million files per second in-memory each having different name and hierarchy. Such files may have contents from 1 byte to 4 KiB. This capability combined with in-memory volumes are candidate to replace traditional NO-SQL databases in many applications. The user may use Scala/Java API to access objects without any need to convert them to JSON or other intermediate formats.</p>
-<h4 id='Eliminate'>Eliminate Index Complexities </h4>
-<p>ActorFS encourage to create files not to create structures to find records in a file. Traditionally database systems where to solve this problem by adding primary or secondary indices to solve problem of intra-file or table search. ActorFS uses the main indexer to do this by allowing user to create large number of files each may having only one record. The record may be read using transaction mechanism if needed using hash code checking. but in real system this is unnecessary in many cases. </p>
+<p>ActorFS is capable to create small files in parallel. With a cluster of 16 commodity node is capable to produce more than 10 million files per second in-memory each having different name and hierarchy. Such files may have contents from 1 byte to 4 KB. This capability combined with in-memory volumes make ActorFS an ideal candidate to replace traditional NO-SQL databases in many applications. The user may use Scala/Java API to access objects without any need to convert them to JSON or other intermediate formats. </p>
+
+<h4 id='Eliminate'>Eliminate Index Complexities</h4>
+<p>ActorFS creates files and not structures to find records in a file. Traditionally database systems attempt to solve this problem by adding primary or secondary indices to solve problem of intra-file or table search. ActorFS uses the main indexer to do this by allowing user to create large number of files each of which may having only one record. The record may be read using transaction mechanism if needed such as using hash code checking, but this is unnecessary in many real use cases. </p>
+
 <h4 id='Serialization'>Object Serialization</h4>
-<p>ActorFS is capable to migrate objects, codes and states throughout the cluster. The API is capable to take snapshot of serialize able objects to have them on different machines.</p>
+<p>ActorFS is capable to migrate objects, codes and states throughout the cluster. The API is capable to take snapshot of serialize-able objects to have them on different machines.</p>
+
 <h4 id='Console'>Console</h4>
-<p>The file system uses a client console that is on top of Scala interpreter. the console allows to find, add , remove or list objects and collections in the file system. ActorFS is equipped with domain specific language names FSL. using FSL users and developer may program the file system to do complex tasks.</p>
+<p>The file system uses a client console that is on top of Scala interpreter. The console allows user to find, add, remove or list objects and collections in the file system. ActorFS is equipped with domain specific language names FSL. Using FSL, users and developer may program the file system to do complex tasks.</p>
+
 <h4 id='Memory'>In-Memory Performance </h4>
-<p>Our assumptions was 1 GB of data in-memory costs x40 of 1 GB of over-disk. 1 GB of data with-SSD is x4 of 1GB of Disk. Also 40% of cluster cost is for storage and careful selection of storage mediums is important specially when a system scales regularly.</p>
-<p>The file system is designed to switch to memory, disk and SSD on-demand with simplicity to take advantage of different storage mediums. Memory is fast, Disk has large capacity and SSD gives random access but low throughput in comparison to in-memory. The system is more flexible when gives uniform access to different options.</p>
-<p>ActorFS is capable to create file and object volumes through API and Console. the user or developer may share un used memories over cluster instance. ActorFS dynamic allocates memory over cluster and places objects on them. The user may activate replication to increase reliability of main memory over cluster.</p>
+<p>Our assumptions was that one (1) GB of data in-memory costs 40times that of one (1) GB over-disk. 1GB of data with-SSD is four (4) times that of 1GB of Disk. Also 40% of cluster cost is for storage and careful selection of storage mediums is important specially when a system needs to scale regularly.</p>
+<p>The file system is designed to switch to memory, disk and SSD on-demand with simplicity, to take advantage of different storage mediums. Memory is fast, Disk has large capacity and SSD gives random access but low throughput in comparison to in-memory. ActorFS is more flexible by giving uniform access to different options.</p>
+<p>ActorFS is capable of creating file and object volumes through API and Console. The user or developer may share unused memories over cluster instance. ActorFS dynamically allocates memory over cluster and places objects on them. The user may activate replication to increase reliability of main memory over cluster.</p>
+
 <h4 id='20Gbps'>20Gbps on a single node </h4>
-<p>ActorFS is designed with BigData in mind. The system need to deliver data as fast as it possible over-disk or in-memory to enable data crunchers for fast retrieval of sequential data. Benchmarks shows each node is capable to push data in-memory up to 20Gbps, more than 2M objects per second. At this level of performance the system need to use infini-band interconnects or equivalent hardware with this performance.</p>
+<p>ActorFS is designed with BigData in mind. The system is designed to deliver data as fast as it is possible over-disk or in-memory to enable data crunchers for fast retrieval of sequential data. Benchmarks shows each node is capable to push data in-memory up to 20Gbps, more than 2M objects per second. At this level of performance the system needs to use infini-band interconnects or equivalent hardware with this performance.</p>
+
 <h4 id='Encryption'>Stream Encryption & Compression Engine </h4>
-<p>ActorFS has an experimental sub-project to bring CUDA capabilities on file systems. Cuda enables stream processing that matters when we want to save raw data in compressed format more than 1Gbps. Currently compression and encryption is impossible at this throughput level with even High-End CPUs. We have a branch of our products for future demands on security and compression. 60x Speedup of Encryption without CPU overhead is achieved using cuda integration of the core file system design. </p>
+<p>ActorFS in its planned September 2014 release will bring CUDA capabilities on file systems. CUDA enables stream processing that matters when we want to save raw data larger than 1Gbps in compressed format. Currently in existing file systems in the market place compression and encryption is impossible at this throughput level with even High-End CPUs. ActorFS development includes addressing the demands for security and compression. 60x Speedup of Encryption without CPU overhead is achieved using CUDA CUDA CUDA integration into the core file system design.</p>
 <p>The Compression Engine uses CUDA to enhance throughput of compression to 0.8 Gbps without CPU overhead.</p>
+
 <h4 id='Perform' >Perform/Transform Model </h4>
 <p>Simplifies distributed Processing, using push based delivery of think small and execute in the large model. With ActorFS the user may submit data actors in-the cluster to deliver data to them in-memory or over-disk.</p>
+
 <h4 id='Distributed'>Distributed Metadata</h4>
-<p>ActorFS is fully decentralized and shared nothing in the architecture. This enables fast and parallel File creation without central directory and makes meta data highly available through expanding it to all nodes in the cluster guarded with replication. In future ActorFS adds error code correction mechanism to be more efficient on replication.</p>
-<p>Fully distribution scales Meta Data operations. The system uses meta data to eliminate unnecessary data management for the user. the meta data engine is designed to be used by the user to create files even for 1-byte of data to reduce utility codes to manage file contents. The file system supports transaction for small sized files that may hold single objects.</p>
+<p>ActorFS is fully decentralized and shared nothing in the architecture. This enables fast and parallel File creation without central directory and makes meta data highly available through expanding it to all nodes in the cluster guarded with replication. In September 2014 release ActorFS adds error code correction mechanism to be more efficient on replication.</p>
+<p>Full distribution scales Meta Data operations. The system uses meta data to eliminate unnecessary data management for the user. The meta data engine is designed to be used by the user to create files even for 1-byte of data to reduce utility codes to manage file contents. The file system supports transaction for small sized files that may hold single objects.</p>
+
 <h4 id='Semi-Ordered'>Semi-Ordered Object Streaming</h4>
-<p>ActorFS uses enhanced mechanisms to manage multiuser concurrency. ActorFS encourages using object mode operations to support semi-ordered data retrieval. When a data request is received within Peer Network, the network synchronizes readers to current stream of objects being read to stop users stressing page layer. This is a kind of optimization by fusion object and file system together. With this mechanism users may freely create concurrent operations. The system promises to deliver all objects to all readers eventually but with different orders.</p>
+<p>ActorFS uses enhanced mechanisms to manage multiuser concurrency. ActorFS encourages using object mode operations to support semi-ordered data retrieval. When a data request is received within Peer Network, the network synchronizes readers to current stream of objects being read to stop users stressing page layer. This is a kind of optimization by fusion of object and file system together. With this mechanism users may freely create concurrent operations. The system promises to deliver all objects to all readers eventually but with different orders.</p>
 <p>This mechanism is Hadoop compatible through HCFS and POSIX Interface that empowers Hadoop deployment to be used with concurrent users. This capability helps to reduce queues of operations on same files. So the cluster is used more effectively when the file system supports Semi-Ordering for object and page files streams.</p>
+
 <h4 id='Hadoop'>Hadoop & Spark Integration</h4>
 <p>ActorFS has Hadoop compatible interfaces to enable big data computing stacks for seamless integration to have more parallelism at the file system layer. BigData owners may optimize disk with Cuda compression engines, save CPUs with fast indexing performance and in-memory technology and be more efficient on networking with stream compression and encryption support. </p>
-<p>In Future ActorFS will develop more on Perform/Transform model to enable developers to process big data using stream processor in the cluster. Clusters of Cuda devices are used. Faster parallel scan (Sequential Read) of object collections for BigData Analytics is added to page system. Also Pages are striped through small page files that makes encryptions, compression more responsive. The system can add more disks on initial stage of sequential scans by using 64KBs pages instead of 128MB data blocks.</p>
+<p>With the future releases of the system the Perform/Transform model will enable developers to process big data using stream processor in the cluster. Clusters of Cuda devices are used. Faster parallel scan (Sequential Read) of object collections for BigData Analytics is added to page system. Also Pages are striped through small page files that makes encryptions, compression more responsive. The system can add more disks on initial stage of sequential scans by using 64KBs pages instead of 128MB data blocks.</p>
+
 <h4 id='Parallel'>Parallel Object File System</h4>
 <p>ActorFS is parallel because uses disk, memory and ssd in conjunction with each other. Also is parallel in number of users through actor system design and semi-ordered streaming. ActorFS is parallel because expands on multiple machines with several cores through actor, volume and file creation that are fully distributed and peer to peer. Memory, Disk and SSD tiring is possible automatically or manual caching and transferring pages and objects between different mediums.</p>
+
 <h4 id='Objects-JSON'>Objects & JSON</h4>
 <p>ActorFS supports Json by converting it to text/string objects. However ActorFS encourage using Actual objects without unnecessary conversion between different formats that creates a lot of problems with binary data and representation. This mechanism enables fast data retrieval.</p>
 <p>ActorFS also has a built it asynchronous REST interface on top of spray.io that is a high scalable and asynchronous http framework to enable web developers specially play framework adaptation.</p>
-<h4 id='Responsive'>Responsive on Parallel Read</h4>
-<p>ActorFS uses pages instead of large blocks for addressing that makes system more responsive by utilizing more disks.</p>
 
-        </div>
-    </div>
+<h4 id='Responsive'>Responsive on Parallel Read</h4>
+<p>ActorFS uses pages instead of large blocks for addressing that makes the system more responsive by utilizing more disks.</p>
+<h5 id='foot'>ActorFS is being released in July and the web site and links to trial the system will go live at that time.
+If you wish to get updated on the system avialbility for trials please contact <a href='fkorangy@actorfs.com'><u>fkorangy@actorfs.com</u></a></h5>
+   
+  </div>
 	
+
+	</div>
+
+</div>
+</body>
 	<div class="row " id='container2'>
 Contact us:  <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico") style="width=20px; height: 23px;  margin-left: 15px;"></a>
 <a href="https://www.linkedin.com"><img src="public/img/linkedin.ico") style="width=15px; height: 15px; margin-left: 15px;"></a>
  <a href="https://www.linkedin.com"><img src="public/img/email.ico") style="width=18px; height: 18px;  margin-left: 15px;"></a>
 </div>
-	</div>
-<div class="col-lg-2 col-xs-2"></div>
-</div> 
-<div class="col-lg-1 col-xs-1"></div>
-</div>
-</body>
-
 
 <div class='row  under-footer'>
 
@@ -189,34 +211,46 @@ Contact us:  <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico
 </html>
 <script>
 var lf;
-var sc= new Array(25)
-var func=['0', '#Actor', '#Problems', '#Principles', '#Simplicity', '#BigData', '#Fusion',  '#Byte','#Simpl', '#Directory', '#Fast', '#Eliminate', '#Serialization', '#Console', '#Memory', '#20Gbps', '#Encryption', '#Perform', '#Distributed', '#Semi-Ordered', '#Hadoop', '#Parallel', '#Objects-JSON', '#Responsive'];
+var sc= new Array(24)
+var func=['0', '#Actor', '#Problems', '#Principles', '#Simplicity', '#BigData', '#Fusion',  '#Byte', '#Directory', '#Fast', '#Eliminate', '#Serialization', '#Console', '#Memory', '#20Gbps', '#Encryption', '#Perform', '#Distributed', '#Semi-Ordered', '#Hadoop', '#Parallel', '#Objects-JSON', '#Responsive'];
 sc[0]=0;
-sc[24]=10000;
+sc[23]=10000;
 var y= 0;
 var x=0;
+
 $(document).ready(function(){
-for(var i=1; i<24; i++){
+for(var i=1; i<23; i++){
 	sc[i]=$(func[i]).position().top+2;
 	lf='#lf'+i;
-	$(lf).css({marginLeft:"-33px"});
-	$(lf).css({marginTop:'19px'});
+	$(lf).css({marginLeft:'0px'});
 	$(lf).css({cursor:"pointer"});
 	$(lf).css({color:"#888888"});
 	$(lf).css({fontSize:"13px"});  // $(file).animate({height:(sc[23]+1000)+"px"});
 }  
+sc[23]=sc[22]+$( window ).height();
+$('#fea').css({height:sc[23]+'px'});
+
 });
+
 $(document).scroll(function(){
-  y= $('body, html').scrollTop();
+	y= $('body, html').scrollTop();
 	x= $('body').scrollTop();
-		for(var i=1; i < 24 ; i++){
+	for(var i=1; i < 23 ; i++){
 	    if((y >= (sc[i]-5) && y< (sc[i+1]-5)) || (x >= (sc[i]-5) && x< (sc[i+1]-5))){
 		    $(lf).css({color:"#888888"});
 		    lf= "#lf" + i;
 			$(lf).css({color : "#000000"});
 		}
-		}
+	}
+	var t=	($( window ).height()- 170)+'px';
+
+	if( x>= sc[22] || y>= (sc[22]-100)) $('#sidebar-wrapper').css({height:t});
+	else $('#sidebar-wrapper').css({height:'95%'});
 });
+
+
+
+
 function left1(){$('body, html').animate({scrollTop:sc[1]})}
 function left2(){$('body, html').animate({scrollTop:sc[2]})}
 function left3(){$('body, html').animate({scrollTop:sc[3]})}
@@ -239,5 +273,4 @@ function left19(){ $('body, html').animate({scrollTop:sc[19]})}
 function left20(){ $('body, html').animate({scrollTop:sc[20]})} 
 function left21(){ $('body, html').animate({scrollTop:sc[21]})} 
 function left22(){ $('body, html').animate({scrollTop:sc[22]})} 
-function left23(){ $('body, html').animate({scrollTop:sc[23]})}   
 </script>

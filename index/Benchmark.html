@@ -21,15 +21,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <div class="container-fluid">
 
-    <div class="row" id='subhead'><img src="public/img/Logo.png" style="width:10%; height: 90%;float:left;">    
+    <div class="row" id='subhead'><img src="public/img/Logo.png" style="width:11.5%; height: 90%;float:left;">    
 	<p id='pp'>Reactive Object File System for Big Data</p></div>
     <div class="row" id='mnu'>
         <label onclick="Home()">Home</label>
 	    <label onclick="Diffrentiators()">Differentiators</label>
 		<label onclick="Benchmark()">Benchmark</label>
         <label onclick="GS()"> Getting Started</label>
-        <label onclick="Download()">Download</label>
-        <label onclick="Bl()">Blog</label>
+        <label onclick="http://www.actorfs.com/#!support/c3vn">Request a Trial</label>
 		<label onclick="Mail()">Mailing List</label>
     </div>
 </div>
@@ -40,9 +39,9 @@
 <div class="row" id='bench'>
 
 <div class="panel panel-default">
-  <div class="panel-heading">Panel heading</div>
+  <div class="panel-heading"></div>
   <div class="panel-body">
-    <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+    
   </div>
   <table class="table table-bordered">
 
@@ -57,7 +56,7 @@
     </tr>
 	<tr>
 		<td class='title'>Architecture  </td> 
-		<td >Shared Nothing/Actor Models </td> 
+		<td >Shared Nothing/<br>Actor Models </td> 
 		<td >Centralized</td> 
 		<td >Centralized</td>
 		<td >Distributed </td>   
@@ -75,16 +74,16 @@
 	</tr>	
 	<tr>
 		<td class='title'>API</td> 
-		<td >FUSE/ Haddop/ SCALA</td> 
-		<td >CLI, FUSE  REST, API</td> 
-		<td >CLI, FUSE API </td>
-		<td >FUSE, mount REST </td>   
+		<td >FUSE/ Haddop/<br>Scala</td> 
+		<td >CLI, FUSE<br> REST, API</td> 
+		<td >CLI,<br> FUSE API </td>
+		<td >FUSE,<br> mount REST </td>   
 		<td >FUSE, mount</td> 
 		<td >FUSE</td> 
 	</tr>	
 	<tr>
-		<td class='title'>Fault Detection</td> 
-		<td >P2P/ Hierarchical Supervison</td> 
+		<td class='title'>Fault<br> Detection</td> 
+		<td >P2P/ Hierarchical<br> Supervison</td> 
 		<td >Fully connect</td> 
 		<td >P2P</td>
 		<td >Fully connect</td>   
@@ -92,7 +91,7 @@
 		<td >Manually</td> 
 	</tr>	
 	<tr>
-		<td class='title'> System Availability</td> 
+		<td class='title'> System<br>Availability</td> 
 		<td >High</td> 
 		<td >No failover</td> 
 		<td >No failover </td>
@@ -101,8 +100,8 @@
 		<td >Failover</td> 
 	</tr>
 	<tr>
-		<td class='title'>Data Availability</td> 
-		<td >Replicatio </td> 
+		<td class='title'>Data<br> Availability</td> 
+		<td >Replication </td> 
 		<td >No failover</td> 
 		<td >No failover</td>
 		<td >Replication</td>   
@@ -110,7 +109,7 @@
 		<td >No</td> 
 	</tr>
 	<tr>
-		<td class='title'>Placement Strategy</td> 
+		<td class='title'>Placement<br> Strategy</td> 
 		<td >Auto</td> 
 		<td >Auto</td> 
 		<td >Manual</td>
@@ -122,22 +121,22 @@
 		<td class='title'>Replication</td> 
 		<td >Async</td> 
 		<td >Async</td> 
-		<td > Sync</td>
+		<td >Sync</td>
 		<td >Sync </td>   
 		<td >Sync </td> 
 		<td >RAID-like</td> 
 	</tr>
 	<tr>
-		<td class='title'>Cache Consistenc</td> 
+		<td class='title'>Cache<br> Consistence</td> 
 		<td >Eventual</td> 
-		<td >WORM, lease </td> 
+		<td >Worm, Lease </td> 
 		<td >Lock</td>
 		<td >Lock</td>   
 		<td >No</td> 
 		<td >Lock</td> 
 	</tr>
 	<tr>
-		<td class='title'>Load Balamcing</td> 
+		<td class='title'>Load<br> Balancing</td> 
 		<td >Auto</td> 
 		<td >Auto</td> 
 		<td >Manual</td>
@@ -147,7 +146,6 @@
 	</tr>
         </table>
 </div>
-		<div id="chart2"   style="height:300px;width:90%; margin-top:150px; margin-left:50px; margin-bottom:130px"></div>
 	</div>
 	<div class="row " id='container2'>
 Contact us:  <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico") style="width=20px; height: 23px;  margin-left: 15px;"></a>
@@ -165,68 +163,3 @@ Contact us:  <a  href="https://www.twitter.com"><img src="public/img/Twitter.ico
 
 
 </html>
-<script>
-var chartData = [["19",7], ["20-Jan-2012", 5], ["21-Jan-2012", 6], ["28-Jan-2012", 9]];
-var chartData1 = [["19",10], ["20-Jan-2012", 2], ["21-Jan-2012", 1], ["28-Jan-2012", 4]];
-var chartData2 = [["19",7], ["20-Jan-2012", 8], ["21-Jan-2012", 7], ["28-Jan-2012", 2]];
-
-function PlotChart(chartData) {
-
-    var plot2 = $.jqplot('chart2', [chartData, chartData1, chartData2], {
-        title: 'Mouse Cursor Tracking',
-		axes: {
-		   yaxis: {
-			   label: 'Percentage',
-                labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
-                tickOptions: {
-                    formatString: '%.1f'
-                }
-            },
-            xaxis: {
-                label: 'Population Percentile',				
-                renderer: $.jqplot.CategoryAxisRenderer,
-                tickOptions: {
-                    formatString: '%b %#d'
-                }
-            }
-         
-        },
-	 grid: {
-            background: 'white'
-        },
-		    
-        highlighter: {
-            sizeAdjust: 3
-        },
-        cursor: {
-            show: true
-        },
-     seriesDefaults:{
-            renderer:$.jqplot.BarRenderer,
-            rendererOptions: {
-            fillToZero: true,
-            barPadding: 0,      // number of pixels between adjacent bars in the same group (same category or bin).
-            barDirection: 'vertical', // vertical or horizontal.
-            barWidth: 20,     // width of the bars.  null to calculate automatically.
-            shadowOffset: 0,    // offset from the bar edge to stroke the shadow.   
-			
-        },
-        },
-        series:[
-            {label:'Hotel'},
-            {label:'Event '},
-            {label:'Airfare'}
-        ],
-
-        legend: {
-            show: true,
-			location:'ne',
-            placement: 'outsideGrid',
-        },
-
-    });
-}
-
-PlotChart(chartData, 20);
-$('#chart2 .jqplot-series-canvas:first').css( "z-index", 9);
-</script>
