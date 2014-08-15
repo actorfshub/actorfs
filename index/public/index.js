@@ -33,6 +33,6 @@ window.open("googleGroup.html",'_top');
 }
 
 function Bl(){window.open("http://actorfs.wordpress.com/",'_top');}
-function GS(){window.open("doc/index.html#getting-started",'_top');}
+function GS(){window.open("doc/howto/started.html",'_top');}
 	
 
